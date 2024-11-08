@@ -1,0 +1,16 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"esbenp.prettier-vscode",
+		"github.codespaces",
+		"github.copilot",
+		"github.copilot-chat",
+		"github.github-vscode-theme",
+		"github.vscode-github-actions",
+		"github.vscode-pull-request-github",
+		"ms-ceintl.vscode-language-pack-pt-br",
+		"pkief.material-icon-theme",
+		"unthrottled.doki-theme",
+		"usernamehw.errorlens"
+	]
+}
