@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 :root {
   /* --bg-color: #d8effe; */
   --bg-color: #e6f2ff;
   --text-color: #094067;
   --headline-color: #094067;
-  --card-color: #f5faff;
-  --font-family: sans-serif;
+  --card-color: #f5fafe;
+  --font-family: "Roboto", sans-serif;
 }
 * {
   margin: 0;
@@ -24,8 +26,7 @@ body {
 header,
 main,
 footer {
-  max-width: 70vw;
-  min-width: 85ch;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -34,27 +35,23 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
   padding: 1rem 2rem;
-  /* background-color: var(--card-color); */
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
 }
 header nav {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  list-style: none;
+  gap: 1rem;
 }
 header nav ul {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  list-style: none;
+  gap: 1rem;
 }
 
 header nav ul li {
   display: flex;
   justify-content: center;
+  list-style: none;
 }
 header nav ul li a {
   position: relative;
@@ -77,30 +74,52 @@ header nav ul li a {
   height: 32px;
 }
 
-.nav-icon {
-  width: 32px;
-  height: 32px;
+.academy {
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-.sign-in {
+.nav-item {
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0.2rem;
+}
+.nav-icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.button {
   background-color: var(--headline-color);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
-.sign-in:hover {
-  background-color: var(--card-color);
-  color: var(--headline-color);
+.button:hover {
+  background-color: #3b82f6;
 }
 
-.academy {
-  font-size: 2.5rem;
-  font-weight: 900;
-  text-align: center;
+.button.delete {
+  background-color: #a52935;
+}
+
+main {
+  margin-block: 3.5rem;
+}
+
+.imprevisto-buttons button {
+  /* background-color: transparent; */
+  border: none;
+  /* color: var(--headline-color); */
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  transition: color 0.3s;
 }
 
 main {
@@ -110,13 +129,12 @@ main {
 .imprevistos-header {
   display: flex;
   align-items: center;
-  gap: 20px;
   justify-content: space-between;
+  margin-block: 1rem;
 }
 
 .imprevistos-header h1 {
   font-weight: 900;
-  /* margin-top: 2rem; */
   font-size: 3rem;
 }
 
@@ -143,8 +161,8 @@ main {
   justify-content: space-between;
 }
 
-.imprevisto-buttons {
+/* .imprevisto-buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
+} */
