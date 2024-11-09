@@ -1,18 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/* Variáveis */
 :root {
-  /* --bg-color: #d8effe; */
   --bg-color: #e6f2ff;
   --text-color: #094067;
   --headline-color: #094067;
   --card-color: #f5fafe;
   --font-family: "Roboto", sans-serif;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 10px;
   font-family: var(--font-family);
@@ -27,9 +29,27 @@ header,
 main,
 footer {
   max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 2rem;
 }
 
+/* Cabeçalho */
+
+/*Logo*/
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.academy-title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*Menu*/
 header {
   display: flex;
   flex-direction: row;
@@ -62,34 +82,57 @@ header nav ul li a {
   white-space: nowrap;
 }
 
-.logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.logo-svg {
-  display: inline;
-  width: 32px;
-  height: 32px;
-}
-
-.academy {
-  font-size: 3.2rem;
-  font-weight: bold;
-  text-align: center;
-}
-
 .nav-item {
-  /* justify-content: center; */
   align-items: center;
   gap: 0.2rem;
 }
 .nav-icon {
-  width: 24px !important;
-  height: 24px !important;
+  width: 24px;
+  height: 24px;
+}
+/*Corpo */
+main {
+  padding-block: 2.5rem;
 }
 
+/*Titulo*/
+.generic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  margin-block-end: 4rem;
+}
+
+.generic-header h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.imprevistos-section {
+  font-size: 1.5rem;
+  /* background-color: var(--card-color); */
+  & li {
+    list-style-type: none;
+  }
+}
+
+.imprevisto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.imprevisto-item {
+  display: flex;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  border-radius: 8px;
+  background-color: var(--card-color);
+  justify-content: space-between;
+}
+
+/* Boõtoes */
 .button {
   background-color: var(--headline-color);
   color: white;
@@ -108,57 +151,10 @@ header nav ul li a {
   background-color: #a52935;
 }
 
-main {
-  margin-block: 3.5rem;
-}
-
 .imprevisto-buttons button {
-  /* background-color: transparent; */
-  border: none;
-  /* color: var(--headline-color); */
-  cursor: pointer;
   font-size: 1.6rem;
   margin-left: 1rem;
   transition: color 0.3s;
-}
-
-main {
-  padding: 2rem;
-}
-
-.imprevistos-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-block: 1rem;
-}
-
-.imprevistos-header h1 {
-  font-weight: 900;
-  font-size: 3rem;
-}
-
-.imprevistos-section {
-  font-size: 1.5rem;
-  /* background-color: var(--card-color); */
-  padding-block: 1rem;
-  & li {
-    list-style-type: none;
-  }
-}
-
-.imprevisto-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.imprevisto-item {
-  display: flex;
-  padding: 2rem;
-  border-radius: 8px;
-  background-color: var(--card-color);
-  justify-content: space-between;
 }
 
 /* .imprevisto-buttons {
