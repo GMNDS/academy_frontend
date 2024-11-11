@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <title>Academy</title>
-    <script src="../assets/scripts/script.js" defer></script>
+    <script src="./assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -93,7 +93,7 @@
       <div class="profile-div">
         <a href="#" class="profile-anchor">
           <p>Olá</p>
-          <p>Usuário</p>
+          <p>{Usuário}</p>
           <img
             src="../assets/images/user-scan.svg"
             alt="profile"
@@ -109,71 +109,17 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Imprevistos</h1>
-        <button class="button add" id="open-modal">Adicionar imprevisto</button>
+        <h1>{Titulo}</h1>
+        <button class="button add" id="open-modal">Adicionar {titulo}</button>
       </section>
-      <section id="imprevistos-section" class="imprevistos-section">
-        <ul class="imprevisto-list">
-          <li class="imprevisto-item">
-            <div class="imprevisto-body">
-              <h2>Matemática</h2>
-              <p>Prova adiada para 10/10/2021</p>
+      <section id="views-section" class="views-section">
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <h2>{titulo}</h2>
+              <p>{item}</p>
             </div>
-            <div class="imprevisto-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-          <li class="imprevisto-item">
-            <div class="imprevisto-body">
-              <h2>História</h2>
-              <p>Prova adiada para 11/10/2021</p>
-            </div>
-            <div class="imprevisto-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="imprevisto-item">
-            <div class="imprevisto-body">
-              <h2>Geografia</h2>
-              <p>Prova adiada para 12/10/2021</p>
-            </div>
-            <div class="imprevisto-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="imprevisto-item">
-            <div class="imprevisto-body">
-              <h2>Física</h2>
-              <p>Prova adiada para 13/10/2021</p>
-            </div>
-            <div class="imprevisto-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="imprevisto-item">
-            <div class="imprevisto-body">
-              <h2>Química</h2>
-              <p>Prova adiada para 14/10/2021</p>
-            </div>
-            <div class="imprevisto-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="imprevisto-item">
-            <div class="imprevisto-body">
-              <h2>Biologia</h2>
-              <p>Prova adiada para 15/10/2021</p>
-            </div>
-            <div class="imprevisto-buttons">
+            <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
@@ -181,38 +127,19 @@
         </ul>
       </section>
 
-      <section id="imprevisto-add" class="imprevisto-add hide">
+      <section id="modal-add" class="modal-add hide">
         <form action="#">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar imprevisto
+              Adicionar {nome}
             </legend>
-            <div class="modal-input">
-              <label for="disciplina" id="disciplina-label">Disciplina</label>
-              <select name="disciplina" id="disciplina">
-                <option value="Português">Português</option>
-                <option value="Matemática">Matemática</option>
-                <option value="História">História</option>
-                <option value="Geografia">Geografia</option>
-                <option value="Ciências">Ciências</option>
-                <option value="Inglês">Inglês</option>
-              </select>
-            </div>
-            <div class="modal-input">
-              <label for="data" id="data-label">Data</label>
-              <input type="date" name="data" id="data" />
-            </div>
-            <div class="modal-input">
-              <label for="descricao" id="descricao-label">Descrição</label>
-              <textarea
-                name="descricao"
-                id="descricao"
-                cols="30"
-                rows="5"
-              ></textarea>
+
+            <div class="modal-item">
+              <label for="" id="" class="modal-label">Example</label>
+              <input type="" name="" id="" class="modal-input" />
             </div>
             <div class="modal-buttons">
-              <button class="button save" id="send-imprevisto">Salvar</button>
+              <button class="button save" id="send-view">Salvar</button>
               <button class="button cancel" id="close-modal">Cancelar</button>
             </div>
           </fieldset>
