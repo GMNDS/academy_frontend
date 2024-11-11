@@ -177,6 +177,12 @@ main {
   border-radius: 8px;
   background-color: var(--card-color);
   justify-content: space-between;
+  align-items: center;
+}
+
+.view-body time {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Boõtoes */
@@ -310,6 +316,12 @@ main {
     justify-content: center;
     align-items: center;
   }
+
+  .view-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -322,37 +334,51 @@ main {
     text-align: center;
   }
 
-  @media (max-width: 415px) {
-    .generic-header {
-      padding-inline: 0.5rem;
-    }
-    .generic-header h1 {
-      font-size: 2.5rem;
-    }
-    header nav ul {
-      padding-inline: 0.5rem;
-    }
-    header nav ul li a {
-      font-size: 0.85rem;
-    }
+  .view-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 
-    .button {
-      padding: 0.8rem 0.8rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      white-space: nowrap;
-    }
+  .view-buttons {
+    flex-direction: row;
+  }
 
-    .view-item {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+  .view-buttons button {
+    margin-left: unset;
+    transition: color 0.3s;
+  }
+}
+@media (max-width: 415px) {
+  .generic-header {
+    padding-inline: 0.5rem;
+  }
+  .generic-header h1 {
+    font-size: 2.5rem;
+  }
+  header nav ul {
+    padding-inline: 0.5rem;
+  }
+  header nav ul li a {
+    font-size: 0.85rem;
+  }
 
-    .view-buttons button {
-      font-size: 1.2rem;
-      margin-left: unset;
-      transition: color 0.3s;
-    }
+  .button {
+    padding: 0.8rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .view-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .view-buttons button {
+    font-size: 1.2rem;
+    margin-left: unset;
+    transition: color 0.3s;
   }
 }
