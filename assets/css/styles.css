@@ -157,7 +157,19 @@ main {
   font-weight: 900;
   font-size: 3rem;
 }
-
+.turma-select {
+  appearance: none;
+  padding: 10px 100px 10px 100px;
+  border: none;
+  border-radius: 10px;
+  color: var(--card-color);
+  background: var(--headline-color);
+  position: relative;
+  top: 50px;
+}
+.turma-select:hover {
+  background-color: #3b82f6;
+}
 .views-section {
   font-size: 1.5rem;
   /* background-color: var(--card-color); */
@@ -355,6 +367,14 @@ main {
   }
   .generic-header h1 {
     font-size: 2.5rem;
+  }
+
+  .turma-select {
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    font-size: 1rem;
+    width: 100vw;
+    text-align: center;
   }
   header nav ul {
     padding-inline: 0.5rem;
