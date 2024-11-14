@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <title>Academy</title>
-    <script src="../assets/scripts/script.js" defer></script>
+    <script src="./assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -109,15 +109,20 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>{Titulo}</h1>
-        <button class="button add" id="open-modal">Adicionar {titulo}</button>
+        <h1>Matrículas</h1>
+        <button class="button add" id="open-modal">Adicionar matrículas</button>
       </section>
+      <select class="turma-select" name="turma-select" id="turma-select">
+        <option value="T-A1">Turma A1</option>
+        <option value="T-A2">Turma A2</option>
+        <option value="T-A3">Turma A3</option>
+      </select>
       <section id="views-section" class="views-section">
         <ul class="view-list">
           <li class="view-item">
             <div class="view-body">
-              <h2>{titulo}</h2>
-              <p>{item}</p>
+              <h2>Joãozinho da silva</h2>
+              <p>RA: 0000001</p>
             </div>
             <div class="view-buttons">
               <button class="button edit">Editar</button>
