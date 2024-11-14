@@ -5,9 +5,12 @@
   --bg-color: #e6f2ff;
   --text-color: #094067;
   --headline-color: #094067;
+  --button-color: #094067;
+  --button-hover-color: #0b5a8a;
   --card-color: #f5fafe;
   --font-family: "Roboto", sans-serif;
   --negative-color: #a52935;
+  --border-color: #d1d5db;
 }
 
 * {
@@ -157,19 +160,43 @@ main {
   font-weight: 900;
   font-size: 3rem;
 }
+
 .turma-select {
-  appearance: none;
-  padding: 10px 100px 10px 100px;
+  background-color: transparent;
+  color: var(--headline-color);
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 600;
   border: none;
-  border-radius: 10px;
-  color: var(--card-color);
-  background: var(--headline-color);
-  position: relative;
-  top: 50px;
+  border-bottom: 2px solid var(--headline-color);
+  border-radius: 0;
+  padding: 0.4rem 0;
+  margin-block: 2rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
 }
+
+.turma-select:focus {
+  outline: none;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
 .turma-select:hover {
-  background-color: #3b82f6;
+  opacity: 0.8;
 }
+
+.turma-select option {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.turma-select
+
 .views-section {
   font-size: 1.5rem;
   /* background-color: var(--card-color); */
@@ -209,7 +236,7 @@ main {
 }
 
 .button:hover {
-  background-color: #3b82f6;
+  background-color: var(--button-hover-color);
 }
 
 .button.delete,
