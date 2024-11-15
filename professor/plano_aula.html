@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <title>Academy</title>
-    <script src="./assets/scripts/script.js" defer></script>
+    <script src="../assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -39,7 +39,6 @@
             fill="currentColor"
           />
         </svg>
-
         <span class="academy-title">cademy</span>
       </div>
       <nav>
@@ -109,20 +108,59 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>{Titulo}</h1>
-        <button class="button add" id="open-modal">Adicionar {titulo}</button>
+        <h1>Plano de aula</h1>
+        <button class="button add" id="open-modal">
+          Adicionar planejamento
+        </button>
       </section>
-      <select class="turma-select" name="turma-select" id="turma-select">
-        <option value="T-A1">Turma A1</option>
-        <option value="T-A2">Turma A2</option>
-        <option value="T-A3">Turma A3</option>
-      </select>
+
       <section id="views-section" class="views-section">
+        <select class="turma-select" name="turma-select" id="turma-select">
+          <option value="T-A1">Turma A1</option>
+          <option value="T-A2">Turma A2</option>
+          <option value="T-A3">Turma A3</option>
+        </select>
         <ul class="view-list">
           <li class="view-item">
             <div class="view-body">
-              <h2>{titulo}</h2>
-              <p>{item}</p>
+              <h2>HTML</h2>
+              <p><time datetime="2024-11-11">11-11-2024</time></p>
+              <p>Aprender conceitos básicos do HTML.</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>CSS</h2>
+              <p><time datetime="2024-11-19">19-11-2024</time></p>
+              <p>Aprender conceitos básicos do CSS.</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>Flexbox</h2>
+              <p><time datetime="2024-11-26">26-11-2024</time></p>
+              <p>
+                Aprender conceitos Flexbox e aplicar em uma galeria de gatos
+              </p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>GRID</h2>
+              <p><time datetime="2024-11-30">30-11-2024</time></p>
+              <p>Aprender conceitos GRID e aplicar em uma galeria sapos</p>
             </div>
             <div class="view-buttons">
               <button class="button edit">Editar</button>
@@ -136,12 +174,43 @@
         <form action="#">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
+              Adicionar Planejamento
             </legend>
 
             <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
+              <label
+                for="titulo-aula"
+                id="titulo-aula-label"
+                class="modal-label"
+                >Titulo da aula</label
+              >
+              <input
+                type="text"
+                name="titulo-aula"
+                id="titulo-aula"
+                class="modal-input"
+              />
+              <label for="data-aula" id="data-aula-label" class="modal-label"
+                >Data da aula</label
+              >
+              <input
+                type="date"
+                name="data-aula"
+                id="data-aula"
+                class="modal-input"
+              />
+              <label
+                for="descricao-aula"
+                id="descricao-aula-label"
+                class="modal-label"
+                >Descrição da aula</label
+              >
+              <textarea
+                name="descricao-aula"
+                id="descricao-aula"
+                class="modal-input"
+                rows="4"
+              ></textarea>
             </div>
             <div class="modal-buttons">
               <button class="button save" id="send-view">Salvar</button>

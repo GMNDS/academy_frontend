@@ -1,40 +1,36 @@
 {
-	//editor
-	"editor.wordWrap": "on",
-	"editor.fontSize": 20,
-	"editor.lineHeight": 1.6,
-	"editor.tabSize": 4,
-	"editor.minimap.enabled": false,
-	"editor.lineNumbers": "relative",
-	"editor.formatOnSave": true,
-	"editor.formatOnPaste": true,
-	"editor.accessibilitySupport": "on",
-	"chat.editor.wordWrap": "on",
-	"files.autoSave": "afterDelay",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"prettier.enable": true,
-	"prettier.singleQuote": false,
-	"prettier.semi": false,
-	//zen
-	"zenMode.fullScreen": false,
-	"zenMode.centerLayout": false,
-	"zenMode.showTabs": "single",
-	"zenMode.hideLineNumbers": false,
-	//doki
-	"doki.statusbar.name": "Academy",
-	"doki.background.anchor": "background-position: center;",
-	"doki.sticker.css": "z-index:100;background-position:100% 97%;&:hover {opacity: 0;}",
-	"workbench.colorTheme": "f770dcfc-f41e-4b49-aa17-66e9ffc208fd",
-	"workbench.iconTheme": "material-icon-theme",
-	"github.copilot.enable": {
-		"*": true,
-		"plaintext": false,
-		"markdown": false,
-		"scminput": false,
-		"java": false,
-		"sql": false,
-		"javascript": false
-	},
-	"git.autofetch": true,
-	"javascript.updateImportsOnFileMove.enabled": "always"
+  //editor
+  "editor.wordWrap": "on",
+  "editor.fontSize": 20,
+  "editor.lineHeight": 1.6,
+  "editor.tabSize": 4,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.accessibilitySupport": "on",
+  "chat.editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.enable": true,
+  "prettier.singleQuote": false,
+  "prettier.semi": true,
+  //zen
+  "zenMode.fullScreen": false,
+  "zenMode.centerLayout": false,
+  "zenMode.showTabs": "single",
+  "zenMode.hideLineNumbers": false,
+  //
+  "workbench.iconTheme": "material-icon-theme",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "java": false,
+    "sql": false,
+    "javascript": false
+  },
+  "git.autofetch": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }

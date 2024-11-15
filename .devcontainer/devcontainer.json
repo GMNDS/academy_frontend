@@ -1,19 +1,20 @@
 {
   "name": "academy_front",
-  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "image": "mcr.microsoft.com/devcontainers/base:alpine",
   "customizations": {
     "vscode": {
       "extensions": [
-        "editorconfig.editorconfig",
-        "esbenp.prettier-vscode",
-        "github.codespaces",
         "github.copilot",
         "github.copilot-chat",
         "github.vscode-github-actions",
+        "ms-vscode.live-server",
         "ms-ceintl.vscode-language-pack-pt-br",
-        "pkief.material-icon-theme",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
         "ecmel.vscode-html-css",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "pkief.material-icon-theme",
+        "dbaeumer.vscode-eslint"
       ]
     }
   }
