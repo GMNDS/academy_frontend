@@ -12,9 +12,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
     <title>Academy</title>
-    <script src="./assets/scripts/script.js" defer></script>
+    <script src="../../assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -109,84 +109,20 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Notas</h1>
-        <button class="button add" id="open-modal">Adicionar Notas</button>
+        <h1>{Titulo}</h1>
+        <button class="button add" id="open-modal">Adicionar {titulo}</button>
       </section>
-      </div>
+      <select class="turma-select" name="turma-select" id="turma-select">
+        <option value="T-A1">Turma A1</option>
+        <option value="T-A2">Turma A2</option>
+        <option value="T-A3">Turma A3</option>
+      </select>
       <section id="views-section" class="views-section">
-          <select class="turma-select" name="" id="">
-          <option value="T-A1">Turma A1</option>
-          <option value="T-A2">Turma A2</option>
-          <option value="T-A3">Turma A3</option>
-        </select>
-      <section id="views-section" class="views-section"></section>
         <ul class="view-list">
           <li class="view-item">
             <div class="view-body">
-              <h2>João Silva Kobayashi</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              <p>TURMA A1</p>
-              <p><strong>P1:</strong> 7</p>
-              <p><strong>P2:</strong> 8</p>
-              <p><strong>T:</strong> 8</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section"></section>
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Rebecca da Silva Formosa</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              TURMA A3
-              <p><strong>P1:</strong> 9</p>
-              <p><strong>P2:</strong> 8</p>
-              <p><strong>T:</strong> 8</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section"></section>
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>André Silva Almeida</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              <p>TURMA A2</p>
-              <p><strong>P1:</strong> 8</p>
-              <p><strong>P2:</strong> 9</p>
-              <p><strong>T:</strong> 7</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section"></section>
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Bruno da Silva Santos</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              <p>TURMA A3</p>
-              <p><strong>P1:</strong> 9</p>
-              <p><strong>P2:</strong> 8</p>
-              <p><strong>T:</strong> 9</p>
+              <h2>{titulo}</h2>
+              <p>{item}</p>
             </div>
             <div class="view-buttons">
               <button class="button edit">Editar</button>

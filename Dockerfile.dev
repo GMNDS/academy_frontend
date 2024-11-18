@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-20.04
+
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends \
+    nginx \
+    curl \
+    git \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+COPY nginx_dev.conf /etc/nginx/nginx.conf
+
+WORKDIR /workspace
+COPY ./src /workspace
+
+RUN mkdir -p /var/lib/nginx/ && chown -R www-data:www-data /var/lib/nginx \
+    && mkdir -p /var/lib/nginx/ /run && chown -R www-data:www-data /var/lib/nginx /run 
+
+
+EXPOSE 80
+USER www-data
+CMD ["nginx", "-g", "daemon off;"]
