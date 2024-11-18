@@ -1,6 +1,8 @@
 {
   "name": "academy_front",
-  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+  "build": {
+    "dockerfile": "../Dockerfile.dev"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -17,5 +19,7 @@
         "dbaeumer.vscode-eslint"
       ]
     }
-  }
+  },
+  "forwardPorts": [89, 80],
+  "postCreateCommand": "sudo nginx -g 'daemon off;'"
 }

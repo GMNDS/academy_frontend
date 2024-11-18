@@ -32,5 +32,6 @@
     "javascript": false
   },
   "git.autofetch": true,
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "remote.localPortHost": "allInterfaces"
 }

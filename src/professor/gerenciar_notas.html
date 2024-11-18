@@ -12,9 +12,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
     <title>Academy</title>
-    <script src="./assets/scripts/script_aluno.js" defer></script>
+    <script src="../../assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -47,17 +47,9 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/home.svg#nav-icon" />
-              </svg>
-              Ínicio
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg fill="none" class="nav-icon">
                 <use href="../assets/images/school.svg#nav-icon" />
               </svg>
-              Grade Horária
+              Plano de aula
             </a>
           </li>
 
@@ -87,14 +79,21 @@
               Atividades
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="../assets/images/umbrella.svg#nav-icon" />
+              </svg>
+              Imprevistos
+            </a>
+          </li>
         </ul>
       </nav>
       <div class="profile-div">
         <a href="#" class="profile-anchor">
-          <div class="profile-info">
-            <p>Olá</p>
-            <p>{Usuário}</p>
-          </div>
+          <p>Olá</p>
+          <p>{Usuário}</p>
           <img
             src="../assets/images/user-scan.svg"
             alt="profile"
@@ -102,43 +101,6 @@
             class="profile-icon"
           />
         </a>
-        <div class="profile-dropdown">
-          <div class="profile-dropdown-header">
-            <div class="profile-intern-header">
-              <img
-                src="../assets/images/user-scan.svg"
-                alt="profile"
-                id="profile-icon"
-                class="profile-icon"
-              />
-              <div class="user-details">
-                <p class="user-details-item name">{Usuário da Silva Junior}</p>
-                <p class="user-details-item">RA: 00000001</p>
-                <p class="user-details-item">
-                  Curso: Desenvolvimento de software multiplataforma academico
-                </p>
-                <p class="user-details-item">Campus: Mauá</p>
-              </div>
-            </div>
-          </div>
-          <div class="profile-dropdown-body">
-            <ul class="profile-nav-list">
-              <li class="profile-nav-item">
-                <a href="#" class="profile-nav-link"> Eventos </a>
-              </li>
-              <li class="profile-nav-item">
-                <a href="#" class="profile-nav-link"> Notícias </a>
-              </li>
-              <li class="profile-nav-item">
-                <a href="#" class="profile-nav-link"> Histórico acadêmico </a>
-              </li>
-            </ul>
-            <div class="profile-buttons">
-              <button class="button save" id="send-view">Perfil</button>
-              <button class="button cancel" id="close-profile">Sair</button>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- <button class="button sign-in">Sign In</button> -->
@@ -147,79 +109,120 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Bem vindo a academy</h1>
+        <h1>Notas</h1>
+        <button class="button add" id="open-modal">Adicionar Notas</button>
+      </section>
+      </div>
+      <section id="views-section" class="views-section">
+          <select class="turma-select" name="" id="">
+          <option value="T-A1">Turma A1</option>
+          <option value="T-A2">Turma A2</option>
+          <option value="T-A3">Turma A3</option>
+        </select>
+      <section id="views-section" class="views-section"></section>
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <h2>João Silva Kobayashi</h2>
+              <p>Analise e Desenvolvimento de Sistemas</p>
+              <p>Noturno</p>
+              <p>TURMA A1</p>
+              <p><strong>P1:</strong> 7</p>
+              <p><strong>P2:</strong> 8</p>
+              <p><strong>T:</strong> 8</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="views-section" class="views-section"></section>
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <h2>Rebecca da Silva Formosa</h2>
+              <p>Analise e Desenvolvimento de Sistemas</p>
+              <p>Noturno</p>
+              TURMA A3
+              <p><strong>P1:</strong> 9</p>
+              <p><strong>P2:</strong> 8</p>
+              <p><strong>T:</strong> 8</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="views-section" class="views-section"></section>
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <h2>André Silva Almeida</h2>
+              <p>Analise e Desenvolvimento de Sistemas</p>
+              <p>Noturno</p>
+              <p>TURMA A2</p>
+              <p><strong>P1:</strong> 8</p>
+              <p><strong>P2:</strong> 9</p>
+              <p><strong>T:</strong> 7</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="views-section" class="views-section"></section>
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <h2>Bruno da Silva Santos</h2>
+              <p>Analise e Desenvolvimento de Sistemas</p>
+              <p>Noturno</p>
+              <p>TURMA A3</p>
+              <p><strong>P1:</strong> 9</p>
+              <p><strong>P2:</strong> 8</p>
+              <p><strong>T:</strong> 9</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+        </ul>
       </section>
 
-      <section id="views-section" class="views-section aluno-start">
-        <ul class="view-list start">
-          <h2>Atividades</h2>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Algortimo - merge sorte</h3>
-              <p>Vence: 15/09/2024 - Fecha: 27/09/2024</p>
+      <section id="modal-add" class="modal-add hide">
+        <form action="#">
+          <fieldset id="modal-form" class="modal-form">
+            <legend id="modal-title" class="modal-title">
+              Adicionar {nome}
+            </legend>
+
+            <div class="modal-item">
+              <label for="" id="" class="modal-label">Example</label>
+              <input type="" name="" id="" class="modal-input" />
             </div>
-          </li>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Criação de olho</h3>
-              <p>Vence: 12/09/2024 - Fecha: 30/09/2024</p>
+            <div class="modal-buttons">
+              <button class="button save" id="send-view">Salvar</button>
+              <button class="button cancel" id="close-modal">Cancelar</button>
             </div>
-          </li>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Landing Page</h3>
-              <p>Vence: 01/09/2024 - Fecha: 02/09/2024</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section aluno-start">
-        <ul class="view-list start">
-          <h2>Imprevistos</h2>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Modelagem de banco de dados - 28/11/2024</h3>
-              <p>Apresentação prorrogada para dia 05/12/2024</p>
-            </div>
-          </li>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Web Design I - 04/10/2024</h3>
-              <p>Aula ocorrerá via Teams pr cont das eleições</p>
-            </div>
-          </li>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Algoritmos e lógica de programação - 15/10/2024</h3>
-              <p>Não haverá aula. O calendário escolar foi alterado</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section aluno-start">
-        <ul class="view-list start">
-          <h2>Últimas Notícias</h2>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Semana da tecnologia</h3>
-              <p>
-                Durante os dias 21 à 24 ocorerá a semana da tecnologia, confira
-                as atividades.
-              </p>
-            </div>
-          </li>
-          <li class="view-item stop">
-            <div class="view-body">
-              <h3>Inscrições para o curso de escrita acadêmica</h3>
-              <p>
-                Inscrições abertas para o curso de escrita acadêmica, não perca
-                essa oportunidade de desenvolver sua escrita acadêmica de forma
-                flexível e prática!
-              </p>
-            </div>
-          </li>
-        </ul>
+          </fieldset>
+        </form>
       </section>
     </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

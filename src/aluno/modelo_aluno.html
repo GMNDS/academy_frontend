@@ -12,9 +12,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <title>Academy</title>
-    <script src="./assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/script_aluno.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -47,16 +47,24 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/school.svg#nav-icon" />
+                <use href="/assets/images/home.svg#nav-icon" />
               </svg>
-              Plano de aula
+              Ínicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="/assets/images/school.svg#nav-icon" />
+              </svg>
+              Grade Horária
             </a>
           </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/math.svg#nav-icon" />
+                <use href="/assets/images/math.svg#nav-icon" />
               </svg>
               Notas
             </a>
@@ -65,7 +73,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/backpack.svg#nav-icon" />
+                <use href="/assets/images/backpack.svg#nav-icon" />
               </svg>
               Presenças
             </a>
@@ -74,33 +82,63 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/ballpen.svg#nav-icon" />
+                <use href="/assets/images/ballpen.svg#nav-icon" />
               </svg>
               Atividades
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg fill="none" class="nav-icon">
-                <use href="../assets/images/umbrella.svg#nav-icon" />
-              </svg>
-              Imprevistos
             </a>
           </li>
         </ul>
       </nav>
       <div class="profile-div">
         <a href="#" class="profile-anchor">
-          <p>Olá</p>
-          <p>{Usuário}</p>
+          <div class="profile-info">
+            <p>Olá</p>
+            <p>{Usuário}</p>
+          </div>
           <img
-            src="../assets/images/user-scan.svg"
+            src="/assets/images/user-scan.svg"
             alt="profile"
             id="profile-icon"
             class="profile-icon"
           />
         </a>
+        <div class="profile-dropdown">
+          <div class="profile-dropdown-header">
+            <div class="profile-intern-header">
+              <img
+                src="/assets/images/user-scan.svg"
+                alt="profile"
+                id="profile-icon"
+                class="profile-icon"
+              />
+              <div class="user-details">
+                <p class="user-details-item name">{Usuário da Silva Junior}</p>
+                <p class="user-details-item">RA: 00000001</p>
+                <p class="user-details-item">
+                  Curso: Desenvolvimento de software multiplataforma academico
+                </p>
+                <p class="user-details-item">Campus: Mauá</p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-dropdown-body">
+            <ul class="profile-nav-list">
+              <li class="profile-nav-item">
+                <a href="#" class="profile-nav-link"> Eventos </a>
+              </li>
+              <li class="profile-nav-item">
+                <a href="#" class="profile-nav-link"> Notícias </a>
+              </li>
+              <li class="profile-nav-item">
+                <a href="#" class="profile-nav-link"> Histórico acadêmico </a>
+              </li>
+            </ul>
+            <div class="profile-buttons">
+              <button class="button save" id="send-view">Perfil</button>
+              <button class="button cancel" id="close-profile">Sair</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- <button class="button sign-in">Sign In</button> -->
@@ -110,13 +148,8 @@
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
         <h1>{Titulo}</h1>
-        <button class="button add" id="open-modal">Adicionar {titulo}</button>
       </section>
-      <select class="turma-select" name="turma-select" id="turma-select">
-        <option value="T-A1">Turma A1</option>
-        <option value="T-A2">Turma A2</option>
-        <option value="T-A3">Turma A3</option>
-      </select>
+
       <section id="views-section" class="views-section">
         <ul class="view-list">
           <li class="view-item">
@@ -124,41 +157,9 @@
               <h2>{titulo}</h2>
               <p>{item}</p>
             </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
           </li>
         </ul>
       </section>
-
-      <section id="modal-add" class="modal-add hide">
-        <form action="#">
-          <fieldset id="modal-form" class="modal-form">
-            <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
-            </legend>
-
-            <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
-            </div>
-            <div class="modal-buttons">
-              <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
-            </div>
-          </fieldset>
-        </form>
-      </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

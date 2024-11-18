@@ -12,9 +12,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <title>Academy</title>
-    <script src="./assets/scripts/script_aluno.js" defer></script>
+    <script src="/assets/scripts/script_aluno.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -45,9 +45,9 @@
       <nav>
         <ul class="academy-list">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="index.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/home.svg#nav-icon" />
+                <use href="/assets/images/home.svg#nav-icon" />
               </svg>
               Ínicio
             </a>
@@ -55,7 +55,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/school.svg#nav-icon" />
+                <use href="/assets/images/school.svg#nav-icon" />
               </svg>
               Grade Horária
             </a>
@@ -64,7 +64,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/math.svg#nav-icon" />
+                <use href="/assets/images/math.svg#nav-icon" />
               </svg>
               Notas
             </a>
@@ -73,7 +73,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/backpack.svg#nav-icon" />
+                <use href="/assets/images/backpack.svg#nav-icon" />
               </svg>
               Presenças
             </a>
@@ -82,7 +82,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/ballpen.svg#nav-icon" />
+                <use href="/assets/images/ballpen.svg#nav-icon" />
               </svg>
               Atividades
             </a>
@@ -96,7 +96,7 @@
             <p>{Usuário}</p>
           </div>
           <img
-            src="../assets/images/user-scan.svg"
+            src="/assets/images/user-scan.svg"
             alt="profile"
             id="profile-icon"
             class="profile-icon"
@@ -106,7 +106,7 @@
           <div class="profile-dropdown-header">
             <div class="profile-intern-header">
               <img
-                src="../assets/images/user-scan.svg"
+                src="/assets/images/user-scan.svg"
                 alt="profile"
                 id="profile-icon"
                 class="profile-icon"
@@ -147,15 +147,75 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>{Titulo}</h1>
+        <h1>Bem vindo a academy</h1>
       </section>
 
-      <section id="views-section" class="views-section">
-        <ul class="view-list">
-          <li class="view-item">
+      <section id="views-section" class="views-section aluno-start">
+        <ul class="view-list start">
+          <h2>Atividades</h2>
+          <li class="view-item stop">
             <div class="view-body">
-              <h2>{titulo}</h2>
-              <p>{item}</p>
+              <h3>Algortimo - merge sorte</h3>
+              <p>Vence: 15/09/2024 - Fecha: 27/09/2024</p>
+            </div>
+          </li>
+          <li class="view-item stop">
+            <div class="view-body">
+              <h3>Criação de olho</h3>
+              <p>Vence: 12/09/2024 - Fecha: 30/09/2024</p>
+            </div>
+          </li>
+          <li class="view-item stop">
+            <div class="view-body">
+              <h3>Landing Page</h3>
+              <p>Vence: 01/09/2024 - Fecha: 02/09/2024</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="views-section" class="views-section aluno-start">
+        <ul class="view-list start">
+          <h2>Imprevistos</h2>
+          <li class="view-item stop">
+            <div class="view-body">
+              <h3>Modelagem de banco de dados - 28/11/2024</h3>
+              <p>Apresentação prorrogada para dia 05/12/2024</p>
+            </div>
+          </li>
+          <li class="view-item stop">
+            <div class="view-body">
+              <h3>Web Design I - 04/10/2024</h3>
+              <p>Aula ocorrerá via Teams pr cont das eleições</p>
+            </div>
+          </li>
+          <li class="view-item stop">
+            <div class="view-body">
+              <h3>Algoritmos e lógica de programação - 15/10/2024</h3>
+              <p>Não haverá aula. O calendário escolar foi alterado</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section id="views-section" class="views-section aluno-start">
+        <ul class="view-list start">
+          <h2>Últimas Notícias</h2>
+          <li class="view-item stop">
+            <div class="view-body">
+              <h3>Semana da tecnologia</h3>
+              <p>
+                Durante os dias 21 à 24 ocorerá a semana da tecnologia, confira
+                as atividades.
+              </p>
+            </div>
+          </li>
+          <li class="view-item stop">
+            <div class="view-body">
+              <h3>Inscrições para o curso de escrita acadêmica</h3>
+              <p>
+                Inscrições abertas para o curso de escrita acadêmica, não perca
+                essa oportunidade de desenvolver sua escrita acadêmica de forma
+                flexível e prática!
+              </p>
             </div>
           </li>
         </ul>
