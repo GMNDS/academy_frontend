@@ -39,7 +39,11 @@ footer {
 }
 
 section {
-  padding-block: 2.5rem;
+  padding-block: 2rem;
+}
+
+section.aluno-start {
+  padding-block: 1rem;
 }
 
 /* Cabeçalho */
@@ -284,6 +288,12 @@ main {
   gap: 2rem;
   list-style-type: none;
 }
+.view-list.start {
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  border-radius: 8px;
+  background-color: var(--card-color);
+}
 
 .view-item {
   display: flex;
@@ -293,6 +303,16 @@ main {
   background-color: var(--card-color);
   justify-content: space-between;
   align-items: center;
+}
+
+.view-item.stop {
+  display: unset;
+  padding-block: unset;
+  padding-inline: unset;
+  border-radius: unset;
+  background-color: unset;
+  justify-content: unset;
+  align-items: unset;
 }
 
 .view-body time {
@@ -423,6 +443,7 @@ main {
     box-shadow: 1px -2px 5px rgba(0, 0, 0, 0.1);
     left: 50%;
     transform: translateX(-50%);
+    z-index: 999;
   }
 
   header nav ul li a {
@@ -436,6 +457,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  section.aluno-start:last-child {
+    padding-block-end: 6rem;
   }
 }
 
