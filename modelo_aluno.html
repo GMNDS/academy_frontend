@@ -148,13 +148,8 @@
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
         <h1>{Titulo}</h1>
-        <button class="button add" id="open-modal">Adicionar {titulo}</button>
       </section>
-      <select class="turma-select" name="turma-select" id="turma-select">
-        <option value="T-A1">Turma A1</option>
-        <option value="T-A2">Turma A2</option>
-        <option value="T-A3">Turma A3</option>
-      </select>
+
       <section id="views-section" class="views-section">
         <ul class="view-list">
           <li class="view-item">
@@ -162,41 +157,10 @@
               <h2>{titulo}</h2>
               <p>{item}</p>
             </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
           </li>
         </ul>
       </section>
-
-      <section id="modal-add" class="modal-add hide">
-        <form action="#">
-          <fieldset id="modal-form" class="modal-form">
-            <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
-            </legend>
-
-            <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
-            </div>
-            <div class="modal-buttons">
-              <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
-            </div>
-          </fieldset>
-        </form>
-      </section>
     </main>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
