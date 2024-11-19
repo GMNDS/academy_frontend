@@ -1,0 +1,215 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/gerir_styles.css" />
+    <title>Academy - Disciplinas</title>
+    <script src="assets/scripts/script.js" defer></script>
+</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e0f0ff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #003366;
+            margin: 0;
+        }
+        .header p {
+            font-size: 14px;
+            color: #666666;
+            margin: 0;
+        }
+        .discipline {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .discipline h2 {
+            font-size: 18px;
+            color: #003366;
+            margin: 0 0 5px 0;
+        }
+        .discipline p {
+            font-size: 14px;
+            color: #666666;
+            margin: 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e0f0ff;
+            padding: 10px 0;
+            border-top: 1px solid #cccccc;
+            border-radius: 0 0 10px 10px;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #003366;
+            font-size: 12px;
+            text-align: center;
+        }
+        .footer a i {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Disciplinas</h1>
+        </div>
+        <div class="discipline">
+            <h2>Design Digital</h2>
+            <p>Professor: João Carlos<br>segunda-feira 19:00-23:30 - Lab 1</p>
+        </div>
+        <div class="discipline">
+            <h2>Algoritmos e estruturas de dados</h2>
+            <p>Professor: Vanin<br>terça-feira 19:00-23:30 - Lab 1</p>
+        </div>
+        <div class="discipline">
+            <h2>Engenharia de Software I</h2>
+            <p>Professor: Rennan<br>quarta-feira 19:00-23:30 - Lab 2</p>
+        </div>
+        <div class="discipline">
+            <h2>Modelagem de Banco de dados</h2>
+            <p>Professor: Jobel<br>quinta-feira 19:00-23:30 - Lab 5</p>
+        </div>
+        <div class="discipline">
+            <h2>Web Design I</h2>
+            <p>Professor: Humberto<br>sexta-feira 19:00-23:30 - Lab 5</p>
+        </div>
+        <div class="discipline">
+            <h2>Redes e Sistemas Operacionais</h2>
+            <p>Professor: Vaz<br>sábado 08:00-11:30 - Lab 5</p>
+        </div>
+        <header id="header">
+            <div class="logo">
+              <svg
+                id="academy-logo"
+                eu
+                width="32"
+                height="32"
+                viewBox="0 0 60 70"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M31 4C32.6175 4 34.5488 4.68815 36.7857 6.40817C39.0191 8.12548 41.3234 10.6988 43.5777 13.9842C48.0848 20.5526 52.0161 29.4134 54.641 38.2059C57.2876 47.0708 58.4564 55.3646 57.8386 60.8398C57.523 63.6374 56.8124 65.0374 56.2729 65.5929C56.0406 65.8321 55.6005 66.2537 53.9662 65.8082C52.4656 65.3991 51.1108 64.4292 49.6885 62.7908C48.3594 61.2597 47.202 59.4306 45.8636 57.3153C45.7161 57.0821 45.5663 56.8454 45.4139 56.6052C43.9821 54.3494 42.2704 51.7163 40.1003 49.6836C37.81 47.5382 34.8466 45.9036 31 45.9036C27.1534 45.9036 24.19 47.5382 21.8997 49.6836C19.7296 51.7163 18.0179 54.3494 16.5861 56.6052C16.4337 56.8454 16.2839 57.082 16.1364 57.3152C14.798 59.4305 13.6407 61.2597 12.3115 62.7908C10.8892 64.4292 9.53438 65.3991 8.03383 65.8082C6.39951 66.2537 5.9594 65.8321 5.72713 65.5929C5.18763 65.0374 4.47701 63.6374 4.16137 60.8398C3.5436 55.3646 4.71238 47.0708 7.35897 38.2059C9.98393 29.4134 13.9152 20.5526 18.4223 13.9842C20.6766 10.6988 22.9809 8.12548 25.2143 6.40817C27.4512 4.68815 29.3825 4 31 4Z"
+                  stroke="currentColor"
+                  stroke-width="9"
+                />
+                <path
+                  d="M37 27C37 27 33.6304 24.8017 32.111 22.5C31.0809 20.9397 30.0219 18 30.0219 18C30.0219 18 28.9482 20.9401 27.911 22.5C26.3806 24.8015 23 27 23 27C23 27 26.5399 29.7426 27.911 31.5C29.2821 33.2574 30.0219 36 30.0219 36C30.0219 36 30.7484 33.2574 32.111 31.5C33.4735 29.7426 37 27 37 27Z"
+                  stroke="currentColor"
+                  fill="currentColor"
+                />
+              </svg>
+        <nav>
+            <ul class="academy-list">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <svg fill="none" class="nav-icon">
+                    <use href="assets/images/school.svg#nav-icon" />
+                  </svg>
+                  Ger. Cursos
+                </a>
+              </li>
+    
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <svg fill="none" class="nav-icon">
+                    <use href="assets/images/#nav-icon" />
+                  </svg>
+                  Matrículas
+                </a>
+              </li>
+    
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <svg fill="none" class="nav-icon">
+                    <use href="assets/images/#nav-icon" />
+                  </svg>
+                  Turmas
+                </a>
+              </li>
+    
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <svg fill="none" class="nav-icon">
+                    <use href="assets/images/#nav-icon" />
+                  </svg>
+                  Horários
+                </a>
+              </li>
+    
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <svg fill="none" class="nav-icon">
+                    <use href="assets/images/#nav-icon" />
+                  </svg>
+                  Eventos
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <svg fill="none" class="nav-icon">
+                    <use href="assets/images/#nav-icon" />
+                  </svg>
+                  Notícias
+                </a>
+              </li>
+    
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <svg fill="none" class="nav-icon">
+                    <use href="assets/images/#nav-icon" />
+                  </svg>
+                  Disciplinas
+                </a>
+              </li>
+            </ul>
+          </nav>
+        <div class="profile-div">
+            <a href="#" class="profile-anchor">
+            <img
+                src="assets/images/user-scan.svg"
+                alt="profile"
+                id="profile-icon"
+                class="profile-icon"
+            />
+            </a>
+        </div>
+<!--
+        <div class="footer">
+            <a href="#"><i class="fas fa-home"></i>Início</a>
+            <a href="#"><i class="fas fa-book"></i>Disciplinas</a>
+            <a href="#"><i class="fas fa-tasks"></i>Atividades</a>
+            <a href="#"><i class="fas fa-clipboard"></i>Notas</a>
+            <a href="#"><i class="fas fa-cog"></i>Configurações</a>
+        </div>
+-->
+    </div>
+</body>
+</html>
