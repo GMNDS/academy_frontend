@@ -33,5 +33,6 @@
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "remote.localPortHost": "allInterfaces"
+  "remote.localPortHost": "allInterfaces",
+  "livePreview.serverRoot": "src"
 }

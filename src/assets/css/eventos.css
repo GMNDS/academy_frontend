@@ -1,0 +1,17 @@
+.imagem_evento {
+  margin-top: 15px;
+  height: 90rem;
+  width: 100rem;
+}
+.titulo_evento {
+  margin-bottom: 10px;
+}
+
+.texto_evento {
+  text-align: justify;
+  line-height: 2.5rem;
+}
+
+.lista_evento {
+  list-style-type: none;
+}

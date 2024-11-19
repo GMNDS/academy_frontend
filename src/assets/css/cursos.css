@@ -1,0 +1,104 @@
+.titulos_secao {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #003366;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.curso-info {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.curso-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.curso-info ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.curso-info ul li {
+  margin: 10px 0;
+}
+
+.curso-info .progresso {
+  margin-top: 20px;
+}
+
+.curso-info .progresso progress {
+  width: 100%;
+}
+
+/* Coluna 2 - Matérias do Semestre */
+.materias {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.materias h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.materias ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.materias ul li {
+  margin: 10px 0;
+}
+
+.materias .btn {
+  background-color: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.materias .btn:hover {
+  background-color: #005599;
+}
+
+/* Progresso Acadêmico */
+.progresso-academico {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progresso-academico h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+.progresso-academico ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.progresso-academico .grafico progress {
+  width: 100%;
+}

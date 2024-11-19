@@ -1,0 +1,278 @@
+<!--header = cabeçalho-->
+<!--div = division (divisão)-->
+<!-- h1 = heading 1 (titulo de nível 1)-->
+<!-- nav = navigation bar (barra de navegação)-->
+<!-- ul = unordered list (lista não ordenada)-->
+<!-- li = list item-->
+<!-- a  = anchor-->
+<!-- p = paragraph (parágrafo)-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/eventos.css" />
+    <title>Academy</title>
+    <script src="/assets/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <svg
+          id="academy-logo"
+          eu
+          width="32"
+          height="32"
+          viewBox="0 0 60 70"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31 4C32.6175 4 34.5488 4.68815 36.7857 6.40817C39.0191 8.12548 41.3234 10.6988 43.5777 13.9842C48.0848 20.5526 52.0161 29.4134 54.641 38.2059C57.2876 47.0708 58.4564 55.3646 57.8386 60.8398C57.523 63.6374 56.8124 65.0374 56.2729 65.5929C56.0406 65.8321 55.6005 66.2537 53.9662 65.8082C52.4656 65.3991 51.1108 64.4292 49.6885 62.7908C48.3594 61.2597 47.202 59.4306 45.8636 57.3153C45.7161 57.0821 45.5663 56.8454 45.4139 56.6052C43.9821 54.3494 42.2704 51.7163 40.1003 49.6836C37.81 47.5382 34.8466 45.9036 31 45.9036C27.1534 45.9036 24.19 47.5382 21.8997 49.6836C19.7296 51.7163 18.0179 54.3494 16.5861 56.6052C16.4337 56.8454 16.2839 57.082 16.1364 57.3152C14.798 59.4305 13.6407 61.2597 12.3115 62.7908C10.8892 64.4292 9.53438 65.3991 8.03383 65.8082C6.39951 66.2537 5.9594 65.8321 5.72713 65.5929C5.18763 65.0374 4.47701 63.6374 4.16137 60.8398C3.5436 55.3646 4.71238 47.0708 7.35897 38.2059C9.98393 29.4134 13.9152 20.5526 18.4223 13.9842C20.6766 10.6988 22.9809 8.12548 25.2143 6.40817C27.4512 4.68815 29.3825 4 31 4Z"
+            stroke="currentColor"
+            stroke-width="9"
+          />
+          <path
+            d="M37 27C37 27 33.6304 24.8017 32.111 22.5C31.0809 20.9397 30.0219 18 30.0219 18C30.0219 18 28.9482 20.9401 27.911 22.5C26.3806 24.8015 23 27 23 27C23 27 26.5399 29.7426 27.911 31.5C29.2821 33.2574 30.0219 36 30.0219 36C30.0219 36 30.7484 33.2574 32.111 31.5C33.4735 29.7426 37 27 37 27Z"
+            stroke="currentColor"
+            fill="currentColor"
+          />
+        </svg>
+
+        <span class="academy-title">cademy</span>
+      </div>
+      <nav>
+        <ul class="academy-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="../assets/images/school.svg#nav-icon" />
+              </svg>
+              Plano de aula
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="../assets/images/math.svg#nav-icon" />
+              </svg>
+              Notas
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="../assets/images/backpack.svg#nav-icon" />
+              </svg>
+              Presenças
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="../assets/images/ballpen.svg#nav-icon" />
+              </svg>
+              Atividades
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="../assets/images/umbrella.svg#nav-icon" />
+              </svg>
+              Imprevistos
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="profile-div">
+        <a href="#" class="profile-anchor">
+          <p>Olá</p>
+          <p>{Usuário}</p>
+          <img
+            src="../assets/images/user-scan.svg"
+            alt="profile"
+            id="profile-icon"
+            class="profile-icon"
+          />
+        </a>
+      </div>
+
+    </header>
+
+    <main id="main">
+      <div class="fade hide" id="fade"></div>
+      <section id="generic-header" class="generic-header">
+        <h1>Eventos</h1>
+      </section>
+      <section id="views-section" class="views-section">
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <h1 class="titulo_evento">Sci-Fi Fest</h1>
+
+    <p><span class="texto_evento">Data:</span> 15 de Dezembro de 2024</p>
+    <p><span class="texto_evento">Horário:</span> 19:00h</p>
+    <p><span class="texto_evento">Local:</span> Auditório Central da Faculdade XYZ</p>
+
+    <h4>Descrição:</h4>
+    <p>Prepare-se para uma imersão no universo da ficção científica e fantasia! O CineFantástico convida a todos para uma noite mágica de cinema, repleta de histórias que desafiam a imaginação e transportam para realidades alternativas.</p>
+
+    <h4>Programação:</h4>
+    <ul class="lista_evento">
+      <li><span class="texto_evento">Interestelar:</span> Uma jornada emocionante pelas profundezas do espaço, em busca de um novo lar para a humanidade.</li>
+      <li><span class="texto_evento">Blade Runner 2049:</span> Uma neo-noir futurista que explora temas como identidade e o que significa ser humano em um mundo dominado pela tecnologia.</li>
+      <li><span class="texto_evento">Moana:</span> Uma animação vibrante que celebra a cultura polinésia e a jornada de uma jovem em busca de seu destino.</li>
+    </ul>
+
+    <h4>Atrações:</h4>
+    <ul class="lista_evento">
+      <li><span class="texto_evento">Concurso de Cosplay:</span> Mostre seu talento e criatividade, se vestindo como o Coringa, a Mulher Maravilha, o Darth Vader ou qualquer outro personagem que te inspire.</li>
+      <li><span class="texto_evento">Oficina de Criação de Fanfics:</span> Aprenda a escrever suas próprias histórias e compartilhar sua paixão pela ficção.</li>
+      <li><span class="texto_evento">Bazar de Produtos Temáticos:</span> Encontre camisetas, canecas, posters e outros itens inspirados em seus filmes favoritos.</li>
+    </ul>
+
+    <h4>Informações Adicionais:</h4>
+    <p><span class="texto_evento">Entrada:</span> Gratuita/Valor do ingresso.</p>
+    <p><span class="texto_evento">Classificação indicativa:</span> 12 anos.</p>
+    <p><span class="texto_evento">Alimentação:</span> Pipoca, refrigerante e outras guloseimas.</p>
+
+    <h4>Observações:</h4>
+    <ul class="lista_evento">
+      <li><span class="texto_evento">Personalize:</span> Adapte a descrição aos filmes escolhidos, atrações e público-alvo.</li>
+      <li><span class="texto_evento">Divulgue:</span> Utilize redes sociais da faculdade para divulgar o evento.</li>
+    </ul>        
+    
+</section>
+<section id="views-section" class="views-section">
+  <ul class="view-list">
+    <li class="view-item">
+      <div class="view-body">
+
+      <h1 class="titulo_evento">Feira de Ciências: Ciência em Ação - Transformando o Mundo</h1>
+      <p class="texto_evento">Data: 15 de outubro de 2023 | Local: Ginásio Poliesportivo da Escola [Nome da Escola]</p>
+    </header>
+  
+        <h3 class="texto_evento">Objetivo</h3>
+        <p>Instigar a curiosidade científica, promover a pesquisa e a inovação, e conectar a comunidade escolar com o mundo da ciência e tecnologia.</p>
+  
+        <h3 class="texto_evento">Público-alvo</h3>
+        <p>Alunos do ensino fundamental e médio, professores, comunidade escolar e comunidade local.</p>
+ 
+        <H3 class="texto_evento">Programação:</H3>
+
+        
+        <b> Manhã:</b>
+        <ul class="lista_evento">
+          <li><span class="texto_evento">9h-10h</span>: Cerimônia de abertura com apresentação musical e fala das autoridades.</li>
+          <li><span class="texto_evento">10h-12h</span>: Visitação aos stands dos projetos científicos.</li>
+          <li><span class="texto_evento">10h-12h</span>: Oficinas simultâneas:</li>
+          <ul class="lista_evento">
+            <li>Robótica para iniciantes</li>
+            <li>Experimentos químicos divertidos</li>
+            <li>Construção de um mini-jardim hidropônico</li>
+            <li>Observação do céu com telescópios</li>
+          </ul>
+        </ul>
+  
+        <b>Tarde:</b>
+        <ul class="lista_evento">
+          <li><span class="texto_evento">14h-16h</span>: Visitação aos stands dos projetos científicos.</li>
+          <li><span class="texto_evento">14h-16h</span>: Oficinas simultâneas:</li>
+          <ul class="lista_evento">
+            <li>Programação de jogos digitais</li>
+            <li>Criação de um mini-vulcão</li>
+            <li>Construção de um aerogerador</li>
+            <li>Experimentos com eletricidade estática</li>
+          </ul>
+          <li><span class="texto_evento">16h-17h</span>: Palestra com cientista renomado sobre temas relevantes como inteligência artificial ou exploração espacial.</li>
+        </ul>
+   
+        <b class="texto_evento">Atrações Especiais:</b>
+        <ul class="lista_evento">
+          <li><span class="texto_evento">Espaço Gamer</span>: Jogos educativos e simuladores científicos.</li>
+          <li><span class="texto_evento">Realidade Virtual</span>: Experiência imersiva em diferentes ambientes científicos.</li>
+          <li><span class="texto_evento">Food Truck</span>: Alimentação saudável com temas científicos (ex: hambúrguer de quinoa, suco verde).</li>
+        </ul>
+    
+        <b class="texto_evento">Divulgação:</b>
+        <ul class="lista_evento">
+          <li>Redes sociais: Criação de um evento no Facebook e Instagram com hashtag oficial (#FeiraDeCiencias[NomeDaEscola]).</li>
+          <li>Cartaz: Design criativo com data, local e atrações principais.</li>
+          <li>E-mail: Envio de convite para pais, alunos e comunidade em geral.</li>
+          <li>Mídia Local: Publicação em jornais, rádios e sites locais.</li>
+          <li>Parcerias: Colaboração com empresas de tecnologia, universidades e instituições de pesquisa para atividades especiais e divulgação.</li>
+        </ul>
+
+        <b class="texto_evento">Recursos Necessários:</b>
+        <ul class="lista_evento">
+          <li>Espaço bem iluminado e ventilado.</li>
+          <li>Mesas e cadeiras para os stands.</li>
+          <li>Materiais para as oficinas e experimentos.</li>
+          <li>Equipamentos audiovisuais.</li>
+          <li>Conexão à internet.</li>
+          <li>Voluntários para auxiliar na organização.</li>
+          <li>Kit de primeiros socorros.</li>
+        </ul>  
+     
+        <b class="texto_evento">Temas Sugeridos para Projetos:</b>
+        <ul class="lista_evento">
+          <li><span class="texto_evento">Sustentabilidade</span>: Energia solar, reciclagem, compostagem, agricultura urbana.</li>
+          <li><span class="texto_evento">Saúde</span>: Doenças, prevenção, alimentação saudável, primeiros socorros.</li>
+          <li><span class="texto_evento">Tecnologia</span>: Robótica, inteligência artificial, programação, internet das coisas.</li>
+          <li><span class="texto_evento">Espaço</span>: Exploração espacial, planetas, estrelas, telescópios.</li>
+          <li><span class="texto_evento">Meio Ambiente</span>: Poluição, biodiversidade, mudanças climáticas.</li>
+        </ul>
+      
+        <div class="texto_evento">Exemplo de Projeto</div>
+        <p><strong>Título:</strong> Energia Renovável: Criando um Mini-Gerador Eólico</p>
+        <p><strong>Descrição:</strong> Construção de um pequeno gerador eólico utilizando materiais reciclados, demonstrando como a energia do vento pode ser convertida em energia elétrica.</p>
+     
+      </section>
+      <section id="views-section" class="views-section">
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+      
+            <h1 class="titulo_evento">Venha Prestigiar o Filme Ind. Realizado por Nossos Alunos!</h1>
+            <p><span class="texto_evento">Data:</span> 23 de Dezembro de 2024</p>
+            <p><span class="texto_evento">Horário:</span> 19:00h</p>
+            <p><span class="texto_evento">Local:</span> Auditório Central da Faculdade XYZ</p>
+            <img class= "imagem_evento"src="/assets/images/Poster.jpg">
+
+      <section id="modal-add" class="modal-add hide">
+        <form action="#">
+          <fieldset id="modal-form" class="modal-form">
+            <legend id="modal-title" class="modal-title">
+              Adicionar {nome}
+            </legend>
+
+            <div class="modal-item">
+              <label for="" id="" class="modal-label">Example</label>
+              <input type="" name="" id="" class="modal-input" />
+            </div>
+            <div class="modal-buttons">
+              <button class="button save" id="send-view">Salvar</button>
+              <button class="button cancel" id="close-modal">Cancelar</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

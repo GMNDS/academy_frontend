@@ -1,0 +1,30 @@
+.verificar_disciplinas {
+  text-align: right;
+  text-decoration: none;
+}
+.barra_de_pesquisa {
+  border-radius: 10px;
+  height: 35px;
+  width: 200px;
+  font-size: 15px;
+  text-align: center;
+  border: 1.5px solid #ccc;
+  transition: border-color 0.5s ease;
+}
+.barra_de_pesquisa:focus {
+  outline: none;
+  border-color: #0129ad;
+}
+
+.button_verificar {
+  margin-bottom: 0.3125rem;
+  padding-left: 1.5rem 0;
+}
+
+.button_group {
+  display: flex;
+}
+
+.buscar {
+  margin-right: 10px;
+}

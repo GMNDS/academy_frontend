@@ -12,9 +12,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/gerir_styles.css" />
-    <title>Academy - Ger. Cursos</title>
-    <script src="assets/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/gerir_disciplinas.css" />
+    <title>Academy</title>
+    <script src="../../assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -40,78 +41,62 @@
           />
         </svg>
 
-        <span class="academy-title">academy</span>
+        <span class="academy-title">cademy</span>
       </div>
       <nav>
         <ul class="academy-list">
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="assets/images/school.svg#nav-icon" />
+                <use href="../assets/images/school.svg#nav-icon" />
               </svg>
-              Ger. Cursos
+              Plano de aula
             </a>
           </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="assets/images/#nav-icon" />
+                <use href="../assets/images/math.svg#nav-icon" />
               </svg>
-              Matrículas
+              Notas
             </a>
           </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="assets/images/#nav-icon" />
+                <use href="../assets/images/backpack.svg#nav-icon" />
               </svg>
-              Turmas
+              Presenças
             </a>
           </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="assets/images/#nav-icon" />
+                <use href="../assets/images/ballpen.svg#nav-icon" />
               </svg>
-              Horários
+              Atividades
             </a>
           </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="assets/images/#nav-icon" />
+                <use href="../assets/images/umbrella.svg#nav-icon" />
               </svg>
-              Eventos
-            </a>
-          </li>
-          
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg fill="none" class="nav-icon">
-                <use href="assets/images/#nav-icon" />
-              </svg>
-              Notícias
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <svg fill="none" class="nav-icon">
-                <use href="assets/images/#nav-icon" />
-              </svg>
-              Disciplinas
+              Imprevistos
             </a>
           </li>
         </ul>
       </nav>
       <div class="profile-div">
         <a href="#" class="profile-anchor">
+          <p>Olá</p>
+          <p>{Usuário}</p>
           <img
-            src="assets/images/user-scan.svg"
+            src="../assets/images/user-scan.svg"
             alt="profile"
             id="profile-icon"
             class="profile-icon"
@@ -125,89 +110,89 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Gerir Cursos</h1>
-        <button class="button add" id="open-modal">Adicionar Curso</button>
+        <h1>Cursos</h1>
+        <button class="button add" id="open-modal">Adicionar curso</button>
       </section>
-      <section id="gerir-cursos-section" class="gerir-cursos-section">
-        <ul class="gerir-curso-list">
-          <li class="gerir-curso-item">
-            <div class="gerir-curso-body">
+      <section id="views-section" class="views-section">
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
               <h2>Segurança da Informação</h2>
               <p>2800 horas</p>
               <p>Começo letivo: 02/2025</p>
               <p>Coordenação do Curso: Silva e Silva</p>
               <p>40 Alunes</p>
             </div>
-            <div class="gerir-curso-buttons">
+            <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
           </li>
-          <li class="gerir-curso-item">
-            <div class="gerir-curso-body">
+          <li class="view-item">
+            <div class="view-body">
+              <h2>Engenharia de Software</h2>
+              <p>3000 horas</p>
+              <p>Começo letivo: 03/2025</p>
+              <p>Coordenação do Curso: João Pereira</p>
+              <p>50 Alunes</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+
+          <li class="view-item">
+            <div class="view-body">
+              <h2>Ciência de Dados</h2>
+              <p>3200 horas</p>
+              <p>Começo letivo: 04/2025</p>
+              <p>Coordenação do Curso: Maria Souza</p>
+              <p>45 Alunes</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+
+          <li class="view-item">
+            <div class="view-body">
+              <h2>Inteligência Artificial</h2>
+              <p>3500 horas</p>
+              <p>Começo letivo: 05/2025</p>
+              <p>Coordenação do Curso: Carlos Lima</p>
+              <p>35 Alunes</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+
+          <li class="view-item">
+            <div class="view-body">
               <h2>Redes de Computadores</h2>
               <p>2800 horas</p>
-              <p>Começo letivo: 02/2025</p>
-              <p>Coordenação do Curso: Vas</p>
+              <p>Começo letivo: 06/2025</p>
+              <p>Coordenação do Curso: Ana Clara</p>
               <p>40 Alunes</p>
-              </div>
-            <div class="gerir-curso-buttons">
+            </div>
+            <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
           </li>
 
-          <li class="gerir-curso-item">
-            <div class="gerir-curso-body">
-              <h2>Desenvolvimento de Sistemas</h2>
-              <p>2800 horas</p>
-              <p>Começo letivo: 02/2025</p>
-              <p>Coordenação do Curso: Maria da Conceição</p>
-              <p>40 Alunes</p>
-              </div>
-            <div class="gerir-curso-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>Desenvolvimento Web</h2>
+              <p>2900 horas</p>
+              <p>Começo letivo: 07/2025</p>
+              <p>Coordenação do Curso: Pedro Santos</p>
+              <p>50 Alunes</p>
             </div>
-          </li>
-
-          <li class="gerir-curso-item">
-            <div class="gerir-curso-body">
-              <h2>Desen. de Software Multiplataforma</h2>
-              <p>2400 horas</p>
-              <p>Começo letivo: 02/2025</p>
-              <p>Coordenação do Curso: Jõao Carlos</p>
-              <p>40 Alunes</p>
-            </div>
-            <div class="gerir-curso-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="gerir-curso-item">
-            <div class="gerir-curso-body">
-              <h2>Lógistica</h2>
-              <p>2800 horas</p>
-              <p>Começo letivo: 02/2025</p>
-              <p>Coordenação do Curso: Nelson Afonso</p>
-              <p>40 Alunes</p>
-            </div>
-            <div class="gerir-curso-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="gerir-curso-item">
-            <div class="gerir-curso-body">
-              <h2>Polímeros</h2>
-              <p>2800 horas</p>
-              <p>Começo letivo: 02/2025</p>
-              <p>Coordenação do Curso: Antonio José</p>
-              <p>40 Alunes</p>
-            </div>
-            <div class="gerir-curso-buttons">
+            <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
@@ -215,38 +200,19 @@
         </ul>
       </section>
 
-      <section id="gerir-curso-add" class="gerir-curso-add hide">
+      <section id="modal-add" class="modal-add hide">
         <form action="#">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar_gerir-curso
+              Adicionar {nome}
             </legend>
-            <div class="modal-input">
-              <label for="disciplina" id="disciplina-label">Disciplina</label>
-              <select name="disciplina" id="disciplina">
-                <option value="Português">Português</option>
-                <option value="Matemática">Matemática</option>
-                <option value="História">História</option>
-                <option value="Geografia">Geografia</option>
-                <option value="Ciências">Ciências</option>
-                <option value="Inglês">Inglês</option>
-              </select>
-            </div>
-            <div class="modal-input">
-              <label for="data" id="data-label">Data</label>
-              <input type="date" name="data" id="data" />
-            </div>
-            <div class="modal-input">
-              <label for="descricao" id="descricao-label">Descrição</label>
-              <textarea
-                name="descricao"
-                id="descricao"
-                cols="30"
-                rows="5"
-              ></textarea>
+
+            <div class="modal-item">
+              <label for="" id="" class="modal-label">Example</label>
+              <input type="" name="" id="" class="modal-input" />
             </div>
             <div class="modal-buttons">
-              <button class="button save" id="send-gerir-curso">Salvar</button>
+              <button class="button save" id="send-view">Salvar</button>
               <button class="button cancel" id="close-modal">Cancelar</button>
             </div>
           </fieldset>
