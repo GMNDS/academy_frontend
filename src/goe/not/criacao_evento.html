@@ -1,0 +1,102 @@
+<!--header = cabeçalho-->
+<!--div = division (divisão)-->
+<!-- h1 = heading 1 (titulo de nível 1)-->
+<!-- nav = navigation bar (barra de navegação)-->
+<!-- ul = unordered list (lista não ordenada)-->
+<!-- li = list item-->
+<!-- a  = anchor-->
+<!-- p = paragraph (parágrafo)-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/gerenciar_eventos.css" />
+
+    <title>Academy</title>
+    <!-- <script src="./assets/scripts/script.js" defer></script> -->
+    <script src="/assets/scripts/criacao_eventos.js"></script>
+  </head>
+  <body>
+    <main id="main">
+      <div class="fade hide" id="fade"></div>
+      <section id="generic-header" class="generic-header">
+        <h1>Criar Eventos</h1>
+      </section>
+
+      <section id="views-section" class="views-section">
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <form id="formulario" class="formulario" action="#">
+                <label for="titulo_evento">Título do Evento:</label>
+                <input
+                  type="text"
+                  id="titulo_evento"
+                  class="titulo_evento"
+                  placeholder="Digite o título desejado..."
+                />
+
+                <label for="descricao_evento">Descrição do evento:</label>
+                <textarea
+                  id="descricao_evento"
+                  class="descricao_evento"
+                  placeholder="Digite a descrição desejada..."
+                ></textarea>
+
+                <label for="imagem" class="custom-file-upload"
+                  >Anexar Imagem:</label
+                >
+                <input
+                  type="file"
+                  id="imagem"
+                  class="imagem"
+                  accept="image/*"
+                />
+
+                <label for="video" class="custom-file-upload"
+                  >Anexar Vídeo</label
+                >
+                <input
+                  type="file"
+                  id="video"
+                  class="modal-input video"
+                  accept="video/*"
+                />
+
+                <button
+                  type="button"
+                  class="button salvar_dados"
+                  onclick="salvarDados()"
+                >
+                  Salvar Dados
+                </button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="modal-add" class="modal-add hide">
+        <form action="#">
+          <fieldset id="modal-form" class="modal-form">
+            <legend id="modal-title" class="modal-title">
+              Adicionar {nome}
+            </legend>
+
+            <div class="modal-item">
+              <label for="" id="" class="modal-label">Example</label>
+              <input type="" name="" id="" class="modal-input" />
+            </div>
+            <div class="modal-buttons">
+              <button class="button save" id="send-view">Salvar</button>
+              <button class="button cancel" id="close-modal">Cancelar</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

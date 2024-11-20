@@ -10,21 +10,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <title>Academy - Gerenciar eventos</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/gerenciar_evento.css" />
-    <title>Academy</title>
-    <!-- <script src="./assets/scripts/script.js" defer></script> -->
+    <link rel="stylesheet" href="/assets/css/gerenciar_eventos.css" />
+    <script src="/assets/scripts/script.js" defer></script>
     <script src="/assets/scripts/gerenciar_evento.js"></script>
-    
+    <script src="/assets/scripts/criacao_eventos.js"></script>
   </head>
   <body>
     <header id="header">
       <div class="logo">
         <svg
           id="academy-logo"
-          eu
           width="32"
           height="32"
           viewBox="0 0 60 70"
@@ -112,32 +111,75 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Gerenciamento de Eventos</h1>
-        <a href="./criacao_evento.html">
-          <button class="button add" id="open-modal">Adicionar Eventos</button>
-        </a>
+        <h1>Eventos</h1>
+        <button class="button add" id="open-modal">Adicionar Eventos</button>
       </section>
 
       <section id="views-section" class="views-section">
         <ul class="view-list">
           <li class="view-item">
-            <div id="publicacoes"></div>           
-
+            <div id="publicacoes"></div>
           </li>
         </ul>
       </section>
-       </fieldset>
+      <section id="modal-add" class="modal-add hide">
+        <form action="#" id="formulario" class="formulario">
+          <fieldset id="modal-form" class="modal-form">
+            <legend id="modal-title" class="modal-title">
+              Adicionar Evento
+            </legend>
+
+            <div class="modal-item">
+              <label for="titulo_evento" class="modal-label"
+                >Título do evento</label
+              >
+              <input
+                type="text"
+                id="titulo_evento"
+                class="modal-input titulo_evento"
+                placeholder="Digite o título desejado..."
+              />
+              <label for="descricao_evento" class="modal-label"
+                >Descrição do evento:</label
+              >
+              <textarea
+                id="descricao_evento"
+                class="modal-input descricao_evento"
+                placeholder="Digite a descrição desejada..."
+                cols="30"
+                rows="15"
+              ></textarea>
+
+              <label for="imagem">Anexar Imagem</label>
+              <input
+                type="file"
+                id="imagem"
+                class="modal-input imagem custom-file-upload"
+                accept="image/*"
+              />
+
+              <label for="video">Anexar Vídeo</label>
+              <input
+                type="file"
+                id="video"
+                class="modal-input video custom-file-upload"
+                accept="video/*"
+              />
+            </div>
+            <div class="modal-buttons">
+              <button
+                type="button"
+                class="button save"
+                id="send-view"
+                onclick="salvarDados()"
+              >
+                Salvar
+              </button>
+              <button class="button cancel" id="close-modal">Cancelar</button>
+            </div>
+          </fieldset>
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

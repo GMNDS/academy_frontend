@@ -1,11 +1,20 @@
+<!--header = cabeçalho-->
+<!--div = division (divisão)-->
+<!-- h1 = heading 1 (titulo de nível 1)-->
+<!-- nav = navigation bar (barra de navegação)-->
+<!-- ul = unordered list (lista não ordenada)-->
+<!-- li = list item-->
+<!-- a  = anchor-->
+<!-- p = paragraph (parágrafo)-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
     <title>Academy</title>
-    <script src="../assets/scripts/script.js" defer></script>
+    <script src="../../assets/scripts/script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -97,68 +106,99 @@
       <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
-
-
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Gerenciar Presenças de Alunos</h1>
-        <p id="current-date"></p>
+        <h1>{Titulo}</h1>
+        <button class="button add" id="open-modal">Adicionar {titulo}</button>
       </section>
+      <select class="turma-select" name="turma-select" id="turma-select">
+        <option value="T-A1">Turma A1</option>
+        <option value="T-A2">Turma A2</option>
+        <option value="T-A3">Turma A3</option>
+      </select>
       <section id="views-section" class="views-section">
-        <ul class="view-list" id="lista-alunos"></ul>
+        <ul class="view-list">
+          <li class="view-item">
+            <div class="view-body">
+              <h2>{titulo}</h2>
+              <p>{item}</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit open-edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>{titulo}</h2>
+              <p>{item}</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit open-edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>{titulo}</h2>
+              <p>{item}</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit open-edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>{titulo}</h2>
+              <p>{item}</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit open-edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+          <li class="view-item">
+            <div class="view-body">
+              <h2>{titulo}</h2>
+              <p>{item}</p>
+            </div>
+            <div class="view-buttons">
+              <button class="button edit open-edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="modal-add" class="modal-add hide">
+        <form action="#">
+          <fieldset id="modal-form" class="modal-form">
+            <legend id="modal-title" class="modal-title">
+              Adicionar {nome}
+            </legend>
+
+            <div class="modal-item">
+              <label for="" id="" class="modal-label">Example</label>
+              <input type="" name="" id="" class="modal-input" />
+            </div>
+            <div class="modal-buttons">
+              <button class="button save" id="send-view">Salvar</button>
+              <button class="button cancel" id="close-modal">Cancelar</button>
+            </div>
+          </fieldset>
+        </form>
       </section>
     </main>
-    
-    <script>
-    const today = new Date();
 
-    const day = String(today.getDate()).padStart(2, '0'); 
-    const month = String(today.getMonth() + 1).padStart(2, '0'); 
-    const year = today.getFullYear();
-
-    const formattedDate = `${day}/${month}/${year}`;
-    const dateElement = document.getElementById("current-date");
-    dateElement.textContent = `Dia: ${formattedDate}`;
-
-
-    const listaAlunos = document.getElementById("lista-alunos");
-    
-const alunos = [
-  "Alice Silva",
-  "Bruno Pereira",
-  "Carla Souza",
-  "Daniel Oliveira",
-  "Emanuel Costa"
-];
-
-function carregarListaAlunos() {
-  const listaAlunos = document.getElementById("lista-alunos");
-  listaAlunos.innerHTML = alunos
-    .map((aluno) => {
-      return `
-        <li class="view-item">
-          <div class="view-body">
-            <h2>${aluno}</h2>
-            <button class="button present" data-status="Presente">Presente</button>
-            <button class="button absent" data-status="Ausente">Ausente</button>
-          </div>
-        </li>
-      `;
-    })
-    .join("");
-}
-
-document.getElementById("lista-alunos").addEventListener("click", (event) => {
-  const target = event.target;
-  const status = target.dataset.status;
-  if (status) {
-    alert(`Status: ${status}`);
-  }
-});
-
-carregarListaAlunos();
-    </script>
-    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

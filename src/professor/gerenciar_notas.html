@@ -12,16 +12,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <title>Academy</title>
-    <script src="../../assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/user_card.js" defer></script>
   </head>
   <body>
     <header id="header">
       <div class="logo">
         <svg
           id="academy-logo"
-          eu
           width="32"
           height="32"
           viewBox="0 0 60 70"
@@ -45,7 +45,7 @@
       <nav>
         <ul class="academy-list">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="index.html" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="../assets/images/school.svg#nav-icon" />
               </svg>
@@ -54,7 +54,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_notas.html" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="../assets/images/math.svg#nav-icon" />
               </svg>
@@ -63,7 +63,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_presencas.html" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="../assets/images/backpack.svg#nav-icon" />
               </svg>
@@ -72,7 +72,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_atividades.html" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="../assets/images/ballpen.svg#nav-icon" />
               </svg>
@@ -81,7 +81,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_imprevistos.html" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="../assets/images/umbrella.svg#nav-icon" />
               </svg>
@@ -92,18 +92,47 @@
       </nav>
       <div class="profile-div">
         <a href="#" class="profile-anchor">
-          <p>Olá</p>
-          <p>{Usuário}</p>
+          <div class="profile-info">
+            <p>Olá</p>
+            <p>{Usuário}</p>
+          </div>
           <img
-            src="../assets/images/user-scan.svg"
+            src="/assets/images/user-scan.svg"
             alt="profile"
             id="profile-icon"
             class="profile-icon"
           />
         </a>
+        <div class="profile-dropdown">
+          <div class="profile-dropdown-header">
+            <div class="profile-intern-header">
+              <img
+                src="/assets/images/user-scan.svg"
+                alt="profile"
+                id="profile-icon"
+                class="profile-icon"
+              />
+              <div class="user-details">
+                <p class="user-details-item name">Professor da Silva</p>
+                <p class="user-details-item email">
+                  professor.silva@academyuniverse.site
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-dropdown-body">
+            <!-- <ul class="profile-nav-list">
+              <li class="profile-nav-item">
+                <a href="#" class="profile-nav-link"> Grade horária </a>
+              </li>
+            </ul> -->
+            <div class="profile-buttons">
+              <button class="button save" id="send-view">Perfil</button>
+              <button class="button cancel" id="close-profile">Sair</button>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
     <main id="main">

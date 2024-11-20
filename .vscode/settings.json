@@ -34,5 +34,8 @@
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "remote.localPortHost": "allInterfaces",
-  "livePreview.serverRoot": "src"
+  "livePreview.serverRoot": "src",
+  "livePreview.defaultPreviewPath": "src/index.html",
+  "livePreview.hostIP": "0.0.0.0",
+  "livePreview.portNumber": 3599
 }

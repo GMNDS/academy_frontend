@@ -70,49 +70,61 @@ Teste suas alterações com **Live preview**, verifique se tudo está funcionand
 ## Telas
 
 ### Página inicial
+
 - [x] WEB
 - [x] Powerapps
 
 ### Plano aula
-- [ ] WEB Professor
+
+- [x] WEB Professor
 - [ ] Powerapps Professor
 - [ ] WEB Aluno
 - [ ] Powerapps Aluno
 
 ### Notas
-- [ ] WEB Professor 
+
+- [ ] WEB Professor
 - [ ] Powerapps Professor
 - [ ] WEB Aluno
 - [ ] Powerapps Aluno
+
 ### Presenças
+
 - [ ] WEB Professor
 - [ ] Powerapps Professor
 - [ ] WEB Aluno
 - [ ] Powerapps Aluno
+
 ### Atividades
+
 - [ ] WEB Professor
 - [ ] Powerapps Professor
 - [ ] WEB Aluno
 - [ ] Powerapps Aluno
+
 ### Cursos
+
 - [ ] WEB GOE
 - [ ] Powerapps GOE
 - [ ] WEB Aluno
 - [ ] Powerapps Aluno
 
 ### Eventos
+
 - [ ] WEB GOE
 - [ ] Powerapps GOE
 - [ ] WEB Aluno
 - [ ] Powerapps Aluno
 
 ### Notícias
+
 - [ ] WEB GOE
 - [ ] Powerapps GOE
 - [ ] WEB Aluno
 - [ ] Powerapps Aluno
 
 ### Grade horária
+
 - [ ] WEB GOE
 - [ ] Powerapps GOE
 - [ ] WEB Aluno
@@ -120,5 +132,5 @@ Teste suas alterações com **Live preview**, verifique se tudo está funcionand
 
 ### Histórico academico
 
-
-
+- [ ] WEB Aluno
+- [ ] Powerapps Aluno

@@ -397,11 +397,12 @@ main {
 }
 
 .modal-item input,
+.modal-item input:not([type="file"]),
 .modal-item textarea,
 .modal-item select {
   min-height: 4rem;
   border-radius: 5px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
 }
 .modal-item textarea {
   resize: none;

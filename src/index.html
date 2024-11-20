@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/css/login.css" />
     <title>Academy</title>
-    <script src="./assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/login.js" defer></script>
   </head>
   <body>
     <main id="main">
@@ -43,24 +43,27 @@
 
           <span class="academy-title">cademy</span>
         </div>
-
-        <form action="#" id="auth-form" class="auth-form">
-          <nav class="login-options">
-            <a href="" class="login-option-link option-active">Login</a>
-            <a href="" class="login-option-link">Primeiro acesso</a>
+        <div class="login-options">
+          <nav class="nav-options">
+            <button class="login-option-link option-active">Login</button>
+            <button class="login-option-link first-acess">Primeiro acesso</button>
           </nav>
+        </div>
+
+        <form action="#" id="auth-form" class="auth-form" method="post">
+
           <div class="auth-item">
             <input
-              type=""
-              name=""
-              id=""
+              type="text"
+              name="username"
+              id="username"
               class="auth-input"
-              placeholder="Insira seu RA"
+              placeholder="Insira seu RA ou e-mail"
             />
             <input
-              type=""
-              name=""
-              id=""
+              type="password"
+              name="password"
+              id="password"
               class="auth-input"
               placeholder="Insira sua senha"
             />
