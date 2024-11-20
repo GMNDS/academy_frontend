@@ -13,15 +13,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/gerir_disciplinas.css" />
+    <link rel="stylesheet" href="/assets/css/acessar_notas.css" />
     <title>Academy</title>
-    <script src="../../assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/acessar_nota.js" defer></script>
   </head>
   <body>
     <header id="header">
       <div class="logo">
         <svg
           id="academy-logo"
+          eu
           width="32"
           height="32"
           viewBox="0 0 60 70"
@@ -109,71 +110,81 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Disciplinas</h1>
-        <button class="button add" id="open-modal">Adicionar disciplina</button>
+
+        <h1>Notas</h1>    
+
       </section>
-      <section id="views-section" class="views-section">
+
+      <section class="subtitulo">
+
+      <h4>
+Cada esforço de hoje é um passo mais perto do sucesso de amanhã. Acredite no seu potencial e continue avançando, porque as melhores conquistas vêm daqueles que persistem. 💪</h4>    
+      </section>
+      
+      </section>
+      <section id="views-section" class="views-section"></section>
         <ul class="view-list">
-          <li class="view-item">
+                    <li class="view-item">
             <div class="view-body">
               <h2>Design Digital</h2>
-              <p>
-                Professor: João Carlos<br />segunda-feira 19:00-23:30 - Lab 1
-              </p>
+              <p>Média de 7.0 de 10.0</p>
+              <p>Faltas: 3</p>
             </div>
             <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
+              <button class="button add open-modal" id="open-modal">Visualizar</button>
+
             </div>
           </li>
           <li class="view-item">
             <div class="view-body">
-              <h2>Algoritmos e estruturas de dados</h2>
-              <p>Professor: Vanin<br />terça-feira 19:00-23:30 - Lab 1</p>
+              <h2>Algoritmos e Lógica de Programação</h2>
+              <p>Média de 8.5 de 10.0</p>
+              <p>Faltas: 0</p>
             </div>
             <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
+              <button class="button add open-modal" id="open-modal-2">Visualizar</button>
             </div>
           </li>
-          <li class="view-item">
+                   <li class="view-item">
             <div class="view-body">
               <h2>Engenharia de Software I</h2>
-              <p>Professor: Rennan<br />quarta-feira 19:00-23:30 - Lab 2</p>
+              <p>Média de 8.2 de 10</p>
+              <p>Faltas: 0</p>
             </div>
             <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
+              <button class="button add open-modal">Visualizar</button>
             </div>
           </li>
-          <li class="view-item">
+                   <li class="view-item">
             <div class="view-body">
-              <h2>Modelagem de Banco de dados</h2>
-              <p>Professor: Jobel<br />quinta-feira 19:00-23:30 - Lab 5</p>
+              <h2>Desenvolvimento Web</h2>
+              <p>Média de 9.0 de 10</p>
+              <p>Faltas: 0
             </div>
             <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
+
+              <button class="button add open-modal">Visualizar</button>
+
             </div>
           </li>
-          <li class="view-item">
+                   <li class="view-item">
             <div class="view-body">
-              <h2>Web Design I</h2>
-              <p>Professor: Humberto<br />sexta-feira 19:00-23:30 - Lab 5</p>
+              <h2>Modelagem de Banco de Dados</h2>
+              <p>Média de 9.0 de 10</p>
+              <p>Faltas: 0
             </div>
             <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
+              <button class="button add open-modal">Visualizar</button>
             </div>
           </li>
-          <li class="view-item">
+                    <li class="view-item">
             <div class="view-body">
-              <h2>Redes e Sistemas Operacionais</h2>
-              <p>Professor: Vaz<br />sábado 08:00-11:30 - Lab 5</p>
+              <h2>Sistemas Operacionais e Redes</h2>
+              <p>Média de 7.5 de 10</p>
+              <p>Faltas: 6
             </div>
             <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
+              <button class="button add open-modal">Visualizar</button>
             </div>
           </li>
         </ul>
@@ -183,29 +194,46 @@
         <form action="#">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar disciplina
+              Avaliação
             </legend>
-
-            <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
-            </div>
-            <div class="modal-buttons">
-              <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
-            </div>
+            <table class="styled-table" >
+              <tr>
+                <th>Tipo</th>
+                <th>Data</th>
+                <th>Nota</th>
+              </tr>
+              <tr>
+                <td>P1</td>
+                <td>05/09/2024</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>P2</td>
+                <td>20/11/2024</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>T</td>
+                <td>24/09/2024</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>P3</td>
+                <td>  </td>
+                <td>0</td>
+              </tr>
+               <br />
+              <tr>
+               
+                <td>Total Média</td>
+                <td></td>
+                <td>7</td>
+              </tr>
+            </table>
+            
           </fieldset>
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

@@ -108,7 +108,14 @@
           Mostrar Horários Matutino
         </button>
 
-        <div id="schedule-display" class="schedule-display hide"></div>
+        <!-- <div  ></div> -->
+      </section>
+      <section id="views-section" class="views-section">
+        <ul
+          class="view-list"
+          id="schedule-display"
+          class="schedule-display hide"
+        ></ul>
       </section>
     </main>
 
@@ -158,8 +165,9 @@
       function displaySchedule(schedule) {
         if (scheduleDisplay.classList.contains("hide")) {
           let scheduleHtml = "";
+          let scheduleHtmlFull = "";
           for (const day in schedule) {
-            scheduleHtml += `<h3>${day}</h3>`;
+            scheduleHtml = `<h3>${day}</h3>`;
             if (schedule[day].length > 0) {
               schedule[day].forEach((item) => {
                 scheduleHtml += `<p>${item}</p>`;
@@ -167,8 +175,15 @@
             } else {
               scheduleHtml += `<p>Sem aulas</p>`;
             }
+            scheduleHtmlFull += `<li class="view-item">
+            <div class="view-body">
+              ${scheduleHtml}
+            </div>
+          </li>`;
+
           }
-          scheduleDisplay.innerHTML = scheduleHtml;
+
+          scheduleDisplay.innerHTML = scheduleHtmlFull;
           scheduleDisplay.classList.remove("hide");
         } else {
           scheduleDisplay.classList.add("hide");
