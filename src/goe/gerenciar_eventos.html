@@ -12,9 +12,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/gerenciar_evento.css" />
     <title>Academy</title>
-    <script src="./assets/scripts/script.js" defer></script>
+    <!-- <script src="./assets/scripts/script.js" defer></script> -->
+    <script src="/assets/scripts/gerenciar_evento.js"></script>
+    
   </head>
   <body>
     <header id="header">
@@ -109,109 +112,21 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Notas</h1>
-        <button class="button add" id="open-modal">Adicionar Notas</button>
+        <h1>Gerenciamento de Eventos</h1>
+        <a href="./criacao_evento.html">
+          <button class="button add" id="open-modal">Adicionar Eventos</button>
+        </a>
       </section>
-      </div>
+
       <section id="views-section" class="views-section">
-          <select class="turma-select" name="" id="">
-          <option value="T-A1">Turma A1</option>
-          <option value="T-A2">Turma A2</option>
-          <option value="T-A3">Turma A3</option>
-        </select>
-      <section id="views-section" class="views-section"></section>
         <ul class="view-list">
           <li class="view-item">
-            <div class="view-body">
-              <h2>João Silva Kobayashi</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              <p>TURMA A1</p>
-              <p><strong>P1:</strong> 7</p>
-              <p><strong>P2:</strong> 8</p>
-              <p><strong>T:</strong> 8</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section"></section>
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Rebecca da Silva Formosa</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              TURMA A3
-              <p><strong>P1:</strong> 9</p>
-              <p><strong>P2:</strong> 8</p>
-              <p><strong>T:</strong> 8</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section"></section>
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>André Silva Almeida</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              <p>TURMA A2</p>
-              <p><strong>P1:</strong> 8</p>
-              <p><strong>P2:</strong> 9</p>
-              <p><strong>T:</strong> 7</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section"></section>
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Bruno da Silva Santos</h2>
-              <p>Analise e Desenvolvimento de Sistemas</p>
-              <p>Noturno</p>
-              <p>TURMA A3</p>
-              <p><strong>P1:</strong> 9</p>
-              <p><strong>P2:</strong> 8</p>
-              <p><strong>T:</strong> 9</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
+            <div id="publicacoes"></div>           
 
-      <section id="modal-add" class="modal-add hide">
-        <form action="#">
-          <fieldset id="modal-form" class="modal-form">
-            <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
-            </legend>
-
-            <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
-            </div>
-            <div class="modal-buttons">
-              <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
-            </div>
-          </fieldset>
+          </li>
+        </ul>
+      </section>
+       </fieldset>
         </form>
       </section>
     </main>

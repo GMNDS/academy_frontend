@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Variáveis */
+:root {
+  --bg-color: #e6f2ff;
+  --text-color: #094067;
+  --headline-color: #094067;
+  --card-color: #f5fafe;
+  --font-family: "Roboto", sans-serif;
+  --negative-color: #a52935;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--font-family);
+}
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+main,
+footer {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding-block: 2.5rem;
+}
+
+/* Menu */
+
+header {
+  position: fixed;
+  width: 260px;
+  height: 100%;
+  background-color: var(--card-color);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 8rem;
+  padding-inline: 0.5rem;
+  border-radius: 50%;
+}
+.academy-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.academy-title {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+header a {
+  display: flex;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  position: relative;
+  color: var(--text-color);
+  padding: 2.5rem 0 2rem 2rem;
+  gap: 1rem;
+}
+
+header a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  border-radius: 25% 0 0 25%;
+  transition: 0.3s ease-in-out;
+}
+
+/* header a:hover {
+  color: var(--card-color);
+} */
+
+header a:hover::before {
+  width: 99%;
+  z-index: -1;
+}
+.nav-item {
+  align-items: center;
+  gap: 0.2rem;
+}
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/*Corpo */
+main {
+  padding-block: 2.5rem;
+}
+
+/*Titulo*/
+.generic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+}
+
+.generic-header h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.imprevistos-section {
+  font-size: 1.5rem;
+  /* background-color: var(--card-color); */
+}
+
+.imprevisto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.imprevisto-item {
+  display: flex;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  border-radius: 8px;
+  background-color: var(--card-color);
+  justify-content: space-between;
+}
+
+/* Boõtoes */
+.button {
+  background-color: var(--headline-color);
+  color: white;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background-color: #3b82f6;
+}
+
+.button.delete,
+.button.cancel {
+  background-color: var(--negative-color);
+}
+
+.imprevisto-buttons button {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+/* .imprevisto-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+} */
+
+/* Modal */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 8px;
+  gap: 2rem;
+  background-color: var(--card-color);
+  padding: 2rem;
+  width: 500px;
+  max-width: 90%;
+  z-index: 20;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: 0.5s ease;
+  pointer-events: all;
+}
+
+.modal-title {
+  position: relative;
+  top: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  margin-block: 1rem;
+}
+
+.modal-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.modal-input input,
+.modal-input textarea,
+.modal-input select {
+  min-height: 4rem;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+}
+.modal-input textarea {
+  resize: none;
+}
+
+.modal-input label {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.hide {
+  transition: 0.5;
+  opacity: 0;
+  pointer-events: none;
+}
+.hide #modal-form {
+  top: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
