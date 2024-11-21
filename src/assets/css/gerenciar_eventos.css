@@ -16,16 +16,21 @@
   border-radius: 5px;
   background-color: #e7f7e7;
 }
+#publicacoes {
+  width: 100%;
+}
 
 .saved-entry {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: var(--card-color);
+  width: 100%;
 
   /* margin-bottom: 10px;
   padding: 10px;
@@ -51,27 +56,6 @@
   border-radius: 1rem;
 }
 
-.modal-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.6rem;
-  /* border: 1px solid var(--border-color); */
-  border-radius: 8px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.modal-input::placeholder {
-  color: #888;
-  font-style: italic;
-  font-size: 1.7rem;
-  font-family: sans-serif;
-}
-
-.modal-input:focus {
-  outline: none;
-  border-color: var(--border-color);
-}
 .custom-file-upload {
   border: none;
 }
@@ -81,17 +65,17 @@
   font-size: 1.6rem;
   color: #fff;
   background-color: var(--button-color);
-  border: 1px solid var(var(--border-color));
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
-  margin-bottom: 15px;
 }
 
 .custom-file-upload:hover::-webkit-file-upload-button {
   background-color: var(--button-hover-color);
   border-color: var(--border-color);
 }
+
 
 .view-item {
   background-color: var(--bg-color);

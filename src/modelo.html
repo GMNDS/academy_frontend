@@ -13,8 +13,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/gerenciar_turmas.css" />
-    <title>Academy - Gerenciar turmas</title>
+    <title>Academy</title>
     <script src="/assets/scripts/script.js" defer></script>
     <script src="/assets/scripts/user_card.js" defer></script>
   </head>
@@ -47,46 +46,46 @@
       <nav>
         <ul class="academy-list">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="/assets/images/home.svg#nav-icon" />
               </svg>
-              Campus
+              Item 1
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="gerenciar_cursos.html" class="nav-link">
+            <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="/assets/images/math.svg#nav-icon" />
               </svg>
-              Cursos
+              Item 2
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="gerenciar_disciplinas.html" class="nav-link">
+            <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="/assets/images/backpack.svg#nav-icon" />
               </svg>
-              Disciplinas
+              Item 3
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="gerenciar_matriculas.html" class="nav-link">
+            <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="/assets/images/ballpen.svg#nav-icon" />
               </svg>
-              Matrículas
+              Item 4
             </a>
           </li>
           <li class="nav-item">
-            <a href="gerenciar_turmas.html" class="nav-link">
+            <a href="#" class="nav-link">
               <svg fill="none" class="nav-icon">
                 <use href="/assets/images/school.svg#nav-icon" />
               </svg>
-              Turmas
+              Item 5
             </a>
           </li>
         </ul>
@@ -95,7 +94,7 @@
         <a href="#" class="profile-anchor">
           <div class="profile-info">
             <p>Olá</p>
-            <p>Administrador</p>
+            <p>Usuário</p>
           </div>
           <img
             src="/assets/images/user-scan.svg"
@@ -114,12 +113,12 @@
                   id="profile-icon"
                   class="profile-icon"
                 />
-                <p class="user-details-item">300000001</p>
+                <p class="user-details-item">400000001</p>
               </div>
               <div class="user-details">
-                <p class="user-details-item name">Administrador da silva</p>
+                <p class="user-details-item name">Usuário da silva</p>
                 <p class="user-details-item">
-                  administrador.silva@academyuniverse.site
+                  usuario.silva@academyuniverse.site
                 </p>
               </div>
             </div>
@@ -127,26 +126,18 @@
           <div class="profile-dropdown-body">
             <ul class="profile-nav-list">
               <li class="profile-nav-item">
-                <a href="gerenciar_eventos.html" class="profile-nav-link">
-                  Eventos
-                </a>
+                <a href="#" class="profile-nav-link"> Item 6 </a>
               </li>
               <li class="profile-nav-item">
-                <a href="gerenciar_noticias.html" class="profile-nav-link">
-                  Notícias
-                </a>
+                <a href="#" class="profile-nav-link"> Item 7 </a>
               </li>
               <li class="profile-nav-item">
-                <a href="gerenciar_horarios.html" class="profile-nav-link">
-                  Horários
-                </a>
+                <a href="#" class="profile-nav-link"> Item 8 </a>
               </li>
             </ul>
             <div class="profile-buttons">
-              <button class="button save" id="send-view"><a href="#">Perfil</a></button>
-              <button class="button cancel" id="close-profile">
-                <a href="/index.html" class="profile-anchor cancel">Sair</a>
-              </button>
+              <button class="button save" id="send-view">Perfil</button>
+              <button class="button cancel" id="close-profile">Sair</button>
             </div>
           </div>
         </div>
@@ -158,69 +149,46 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Gerenciador de Turmas</h1>
-        <form action="/pesquisar" method="get">
-          <input class="barra_de_pesquisa" type="search" id="pesquisa" name="q" placeholder="Digite a turma desejada">
-          <button class="button buscar" type="submit">Buscar</button>
-        <button class="button add" id="open-modal">Adicionar Turma</button>
+        <h1>Modelo</h1>
+        <button class="button add" id="open-modal">Adicionar Modelo</button>
       </section>
       <section id="views-section" class="views-section">
         <ul class="view-list">
           <li class="view-item">
             <div class="view-body">
-              <h2>1º Ano | Turma A</h2>
-              <p>Desenvolvimento de Software Multiplataforma</p>
-              <p>Campus Mauá</p>
+              <h2>Modelo 1</h2>
             </div>
-              <div class="view-buttons">
-               <button class="button button_verificar">Verificar Disciplinas</button>
-                <div class="button_group">
-                  <button class="button edit">Editar</button>
-                  <button class="button delete">Excluir</button>
-                </div>
+            <div class="view-buttons">
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
             </div>
           </li>
           <li class="view-item">
             <div class="view-body">
-              <h2>2º Ano | Turma A</h2>
-              <p>Desenvolvimento de Software Multiplataforma</p>
-              <p>Campus Mauá</p>
+              <h2>Modelo 2</h2>
             </div>
             <div class="view-buttons">
-             <button class="button button_verificar">Verificar Disciplinas</button>
-              <div class="button_group">
-                <button class="button edit">Editar</button>
-                <button class="button delete">Excluir</button>
-              </div>
-          </div>
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
           </li>
           <li class="view-item">
             <div class="view-body">
-              <h2>3º Ano | Turma A</h2>
-              <p>Desenvolvimento de Software Multiplataforma</p>
-              <p>Campus Mauá</p>
+              <h2>Modelo 3</h2>
             </div>
             <div class="view-buttons">
-             <button class="button button_verificar">Verificar Disciplinas</button>
-              <div class="button_group">
-                <button class="button edit">Editar</button>
-                <button class="button delete">Excluir</button>
-              </div>
-          </div>
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
           </li>
           <li class="view-item">
             <div class="view-body">
-              <h2>1º Ano | Turma A</h2>
-              <p>Informática para Negócios</p>
-              <p>Campus Mauá</p>
+              <h2>Modelo 4</h2>
             </div>
             <div class="view-buttons">
-             <button class="button button_verificar">Verificar Disciplinas</button>
-              <div class="button_group">
-                <button class="button edit">Editar</button>
-                <button class="button delete">Excluir</button>
-              </div>
-          </div>
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
+            </div>
           </li>
         </ul>
       </section>
@@ -229,12 +197,18 @@
         <form action="#">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
+              Adicionar modelo
             </legend>
 
             <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
+              <!-- <label for="" id="" class="modal-label">Example</label> -->
+              <input
+                type=""
+                name=""
+                id=""
+                class="modal-input"
+                placeholder="Insira o nome do modelo"
+              />
             </div>
             <div class="modal-buttons">
               <button class="button save" id="send-view">Salvar</button>
@@ -244,14 +218,5 @@
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

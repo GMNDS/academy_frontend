@@ -13,7 +13,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
     <title>Academy</title>
     <script src="/assets/scripts/login.js" defer></script>
   </head>
@@ -83,30 +83,5 @@
         </div>
       </section>
     </main>
-    <script defer>
-      const username = document.querySelector('#username');
-      const password = document.querySelector('#password');
-      const sendAuth = document.querySelector('#send-auth');
-
-      sendAuth.addEventListener('click', (event) => {
-        event.preventDefault();
-      
-        switch(username.value + password.value) {
-          case 'admin1234':
-            window.location.href = '/goe';
-            break;
-          case 'aluno1234':
-            window.location.href = '/aluno';
-            break;
-          case 'professor1234':
-            window.location.href = '/professor';
-            break;
-          default:
-            alert('Usuário ou senha inválidos');
-        }
-
-
-      });
-    </script>
   </body>
 </html>

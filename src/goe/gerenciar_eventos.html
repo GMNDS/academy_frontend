@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/gerenciar_eventos.css" />
     <script src="/assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/user_card.js" defer></script>
     <script src="/assets/scripts/gerenciar_evento.js"></script>
     <script src="/assets/scripts/criacao_eventos.js"></script>
   </head>
@@ -24,6 +25,7 @@
       <div class="logo">
         <svg
           id="academy-logo"
+          eu
           width="32"
           height="32"
           viewBox="0 0 60 70"
@@ -47,62 +49,109 @@
       <nav>
         <ul class="academy-list">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="index.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/school.svg#nav-icon" />
+                <use href="/assets/images/home.svg#nav-icon" />
               </svg>
-              Plano de aula
+              Campus
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_cursos.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/math.svg#nav-icon" />
+                <use href="/assets/images/math.svg#nav-icon" />
               </svg>
-              Notas
+              Cursos
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_disciplinas.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/backpack.svg#nav-icon" />
+                <use href="/assets/images/backpack.svg#nav-icon" />
               </svg>
-              Presenças
+              Disciplinas
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_matriculas.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/ballpen.svg#nav-icon" />
+                <use href="/assets/images/ballpen.svg#nav-icon" />
               </svg>
-              Atividades
+              Matrículas
             </a>
           </li>
-
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="gerenciar_turmas.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/umbrella.svg#nav-icon" />
+                <use href="/assets/images/school.svg#nav-icon" />
               </svg>
-              Imprevistos
+              Turmas
             </a>
           </li>
         </ul>
       </nav>
       <div class="profile-div">
         <a href="#" class="profile-anchor">
-          <p>Olá</p>
-          <p>{Usuário}</p>
+          <div class="profile-info">
+            <p>Olá</p>
+            <p>Administrador</p>
+          </div>
           <img
-            src="../assets/images/user-scan.svg"
+            src="/assets/images/user-scan.svg"
             alt="profile"
             id="profile-icon"
             class="profile-icon"
           />
         </a>
+        <div class="profile-dropdown">
+          <div class="profile-dropdown-header">
+            <div class="profile-intern-header">
+              <div class="user-profile">
+                <img
+                  src="/assets/images/user-scan.svg"
+                  alt="profile"
+                  id="profile-icon"
+                  class="profile-icon"
+                />
+                <p class="user-details-item">300000001</p>
+              </div>
+              <div class="user-details">
+                <p class="user-details-item name">Administrador da silva</p>
+                <p class="user-details-item">
+                  administrador.silva@academyuniverse.site
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-dropdown-body">
+            <ul class="profile-nav-list">
+              <li class="profile-nav-item">
+                <a href="gerenciar_eventos.html" class="profile-nav-link">
+                  Eventos
+                </a>
+              </li>
+              <li class="profile-nav-item">
+                <a href="gerenciar_noticias.html" class="profile-nav-link">
+                  Notícias
+                </a>
+              </li>
+              <li class="profile-nav-item">
+                <a href="gerenciar_horarios.html" class="profile-nav-link">
+                  Horários
+                </a>
+              </li>
+            </ul>
+            <div class="profile-buttons">
+              <button class="button save" id="send-view"><a href="#">Perfil</a></button>
+              <button class="button cancel" id="close-profile">
+                <a href="/index.html" class="profile-anchor cancel">Sair</a>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- <button class="button sign-in">Sign In</button> -->
