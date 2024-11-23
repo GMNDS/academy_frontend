@@ -22,6 +22,7 @@
       <div class="logo">
         <svg
           id="academy-logo"
+          eu
           width="32"
           height="32"
           viewBox="0 0 60 70"
@@ -47,45 +48,43 @@
           <li class="nav-item">
             <a href="index.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/school.svg#nav-icon" />
+                <use href="/assets/images/home.svg#nav-icon" />
               </svg>
-              Plano de aula
+              Ínicio
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="gerenciar_notas.html" class="nav-link">
+            <a href="notas_faltas.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/math.svg#nav-icon" />
+                <use href="/assets/images/backpack.svg#nav-icon" />
               </svg>
-              Notas
+              Notas e Faltas
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="gerenciar_presencas.html" class="nav-link">
+            <a href="atividades.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/backpack.svg#nav-icon" />
-              </svg>
-              Presenças
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="gerenciar_atividades.html" class="nav-link">
-              <svg fill="none" class="nav-icon">
-                <use href="../assets/images/ballpen.svg#nav-icon" />
+                <use href="/assets/images/ballpen.svg#nav-icon" />
               </svg>
               Atividades
             </a>
           </li>
-
           <li class="nav-item">
-            <a href="gerenciar_imprevistos.html" class="nav-link">
+            <a href="grade_horaria.html" class="nav-link">
               <svg fill="none" class="nav-icon">
-                <use href="../assets/images/umbrella.svg#nav-icon" />
+                <use href="/assets/images/school.svg#nav-icon" />
               </svg>
-              Imprevistos
+              Grade Horária
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="curso_cadastrado.html" class="nav-link">
+              <svg fill="none" class="nav-icon">
+                <use href="/assets/images/math.svg#nav-icon" />
+              </svg>
+              Curso
             </a>
           </li>
         </ul>
@@ -94,7 +93,7 @@
         <a href="#" class="profile-anchor">
           <div class="profile-info">
             <p>Olá</p>
-            <p>{usuário}</p>
+            <p>Aluno</p>
           </div>
           <img
             src="/assets/images/user-scan.svg"
@@ -106,26 +105,39 @@
         <div class="profile-dropdown">
           <div class="profile-dropdown-header">
             <div class="profile-intern-header">
-              <img
-                src="/assets/images/user-scan.svg"
-                alt="profile"
-                id="profile-icon"
-                class="profile-icon"
-              />
+              <div class="user-profile">
+                <img
+                  src="/assets/images/user-scan.svg"
+                  alt="profile"
+                  id="profile-icon"
+                  class="profile-icon"
+                />
+                <p class="user-details-item">100000001</p>
+              </div>
               <div class="user-details">
-                <p class="user-details-item name">Professor da Silva</p>
-                <p class="user-details-item email">
-                  professor.silva@academyuniverse.site
+                <p class="user-details-item name">Aluno da silva</p>
+                <p class="user-details-item">
+                  aluno.silva@academyuniverse.site
                 </p>
+
+                <p class="user-details-item">
+                  <strong>Curso: </strong> Desenvolvimento de software
+                  multiplataforma
+                </p>
+                <p class="user-details-item"><strong>Campus:</strong> Mauá</p>
               </div>
             </div>
           </div>
           <div class="profile-dropdown-body">
-            <!-- <ul class="profile-nav-list">
+            <ul class="profile-nav-list">
               <li class="profile-nav-item">
-                <a href="#" class="profile-nav-link"> Grade horária </a>
+                <a href="eventos.html" class="profile-nav-link"> Eventos </a>
               </li>
-            </ul> -->
+              <li class="profile-nav-item">
+                <a href="noticias.html" class="profile-nav-link"> Notícias </a>
+              </li>
+            </ul>
+
             <div class="profile-buttons">
               <button class="button save" id="send-view">
                 <a href="#">Perfil</a>
@@ -137,6 +149,8 @@
           </div>
         </div>
       </div>
+
+      <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
     <main id="main">
@@ -153,11 +167,9 @@
                 <time datetime="2024-09-15">Vencimento: 15/09/2024</time>
                 <time datetime="2024-09-15">Expiração: 20/09/2024</time>
               </p>
-
             </div>
             <div class="view-buttons">
               <button class="button edit">Visualizar</button>
-
             </div>
           </li>
           <li class="view-item">
@@ -170,7 +182,6 @@
             </div>
             <div class="view-buttons">
               <button class="button edit">Visualizar</button>
-
             </div>
           </li>
 
@@ -181,11 +192,9 @@
                 <time datetime="2024-10-15">Vencimento: 15/10/2024</time>
                 <time datetime="2024-10-20">Expiração: 20/10/2024</time>
               </p>
-
             </div>
             <div class="view-buttons">
               <button class="button edit">Visualizar</button>
-
             </div>
           </li>
 
@@ -196,11 +205,9 @@
                 <time datetime="2024-11-01">Vencimento: 01/11/2024</time>
                 <time datetime="2024-11-06">Expiração: 06/11/2024</time>
               </p>
-
             </div>
             <div class="view-buttons">
               <button class="button edit">Visualizar</button>
-
             </div>
           </li>
 
@@ -220,7 +227,6 @@
             </div>
             <div class="view-buttons">
               <button class="button edit">Visualizar</button>
-
             </div>
           </li>
 
@@ -240,7 +246,6 @@
             </div>
             <div class="view-buttons">
               <button class="button edit">Visualizar</button>
-
             </div>
           </li>
         </ul>
@@ -253,9 +258,21 @@
               Realizar Atividade
             </legend>
             <div class="modal-item">
-              <label for="descricao_atividade" class="activity_des">DESCRIÇÃO DA ATIVIDADE</label>
-              <p type="text" name="" id="" placeholder="Insira o nome da atividade" class="modal-input">
-                Apartir do seu conhecimento e do conteúdo passado anteriormente durante o semestre no que diz respeito ao HTML e ao CSS, analise a seguinte situação problema e descreva pelo menos uma solução que possa resolver esta através das linguagens estudadas (seja por um arquivo anexado ou pelo próprio sistema da Academy).
+              <label for="descricao_atividade" class="activity_des"
+                >DESCRIÇÃO DA ATIVIDADE</label
+              >
+              <p
+                type="text"
+                name=""
+                id=""
+                placeholder="Insira o nome da atividade"
+                class="modal-input"
+              >
+                Apartir do seu conhecimento e do conteúdo passado anteriormente
+                durante o semestre no que diz respeito ao HTML e ao CSS, analise
+                a seguinte situação problema e descreva pelo menos uma solução
+                que possa resolver esta através das linguagens estudadas (seja
+                por um arquivo anexado ou pelo próprio sistema da Academy).
               </p>
               <textarea
                 name=""
@@ -264,8 +281,13 @@
                 rows="5"
                 placeholder="Insira a Resposta da atividade"
               ></textarea>
-              <input type="file" name="" id="add_arq" placeholder="Anexe o arquivo da atividade" class="modal-input">
-
+              <input
+                type="file"
+                name=""
+                id="add_arq"
+                placeholder="Anexe o arquivo da atividade"
+                class="modal-input"
+              />
             </div>
             <div class="modal-buttons">
               <button class="button save" id="send-view">Enviar</button>
