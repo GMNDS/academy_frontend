@@ -345,6 +345,12 @@ main {
   background-color: var(--negative-color);
 }
 
+.view-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .view-buttons button {
   font-size: 1.6rem;
   margin-left: 1rem;

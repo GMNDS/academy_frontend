@@ -36,7 +36,6 @@
   "remote.localPortHost": "allInterfaces",
   "livePreview.serverRoot": "src",
   "livePreview.defaultPreviewPath": "src/index.html",
-  "livePreview.hostIP": "127.0.0.1",
   "livePreview.portNumber": 3599,
   "livePreview.tasks.runTaskWithExternalPreview": true,
   "livePreview.showServerStatusNotifications": true

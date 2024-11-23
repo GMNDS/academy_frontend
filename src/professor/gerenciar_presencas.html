@@ -133,10 +133,15 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Gerenciar Presenças de Alunos</h1>
+        <h1>Presenças</h1>
         <p id="current-date"></p>
       </section>
       <section id="views-section" class="views-section">
+        <select class="turma-select" name="turma-select" id="turma-select">
+          <option value="T-A1">Turma A1</option>
+          <option value="T-A2">Turma A2</option>
+          <option value="T-A3">Turma A3</option>
+        </select>
         <ul class="view-list" id="lista-alunos"></ul>
       </section>
     </main>
@@ -159,7 +164,6 @@
         "Bruno Pereira",
         "Carla Souza",
         "Daniel Oliveira",
-        "Emanuel Costa",
       ];
 
       function carregarListaAlunos() {
