@@ -3,7 +3,7 @@ import { PGlite } from "https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/i
 let pg;
 
 export async function runMigrations() {
-  const response = await fetch("http://localhost/migrations/");
+  const response = await fetch("https://academyuniverse.site/migrations/");
   const files = (await response.json()).map((obj) => obj.name);
 
   pg = await PGlite.create("idb://pgdata");
