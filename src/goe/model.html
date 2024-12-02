@@ -13,8 +13,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <title>Academy - Gerenciar Campus</title>
-    <script type="module" src="/database/campus.js" defer></script>
+    <title>Academy -</title>
+    <script type="module" src="/database/model.js" defer></script>
     <script src="/assets/scripts/user_card.js" defer></script>
   </head>
   <body>
@@ -152,11 +152,11 @@
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Campus</h1>
-        <button class="button add" id="open-modal">Adicionar campus</button>
+        <h1>Model</h1>
+        <button class="button add" id="open-modal">Adicionar model</button>
       </section>
       <section id="views-section" class="views-section">
-        <template id="campus-template">
+        <template id="model-template">
           <li class="view-item">
             <div class="view-body">
               <h2></h2>
@@ -174,16 +174,16 @@
         <form action="#" method="post">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar campus
+              Adicionar Model
             </legend>
 
             <div class="modal-item">
               <input
                 type="text"
-                name="campus"
-                id="campus"
+                name="model"
+                id="model"
                 class="modal-input"
-                placeholder="Insira o nome do campus"
+                placeholder="Insira o nome do model"
               />
             </div>
             <div class="modal-buttons">
@@ -193,6 +193,6 @@
         </form>
       </section>
     </main>
-    <input type="hidden" id="campus-id" />
+    <input type="hidden" id="model-id" />
   </body>
 </html>
