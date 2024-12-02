@@ -12,6 +12,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
   WORKDIR /workspace
   COPY ./src /workspace
 
+
   EXPOSE 80
 
   CMD ["nginx", "-g", "daemon off;"]

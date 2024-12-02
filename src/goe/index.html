@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <title>Academy - Gerenciar Campus</title>
-    <script src="/assets/scripts/script.js" defer></script>
+    <script type="module" src="/database/campus.js" defer></script>
     <script src="/assets/scripts/user_card.js" defer></script>
   </head>
   <body>
@@ -137,7 +137,7 @@
               </li>
             </ul>
             <div class="profile-buttons">
-              <button class="button save" id="send-view">
+              <button class="button profile" id="profile-button">
                 <a href="#">Perfil</a>
               </button>
               <button class="button cancel" id="close-profile">
@@ -147,8 +147,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
     <main id="main">
@@ -158,55 +156,28 @@
         <button class="button add" id="open-modal">Adicionar campus</button>
       </section>
       <section id="views-section" class="views-section">
-        <ul class="view-list">
+        <template id="campus-template">
           <li class="view-item">
             <div class="view-body">
-              <h2>Mauá</h2>
+              <h2></h2>
             </div>
             <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
           </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Santo andré</h2>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>São caetano</h2>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>São Paulo</h2>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
+        </template>
+        <ul class="view-list"></ul>
       </section>
 
       <section id="modal-add" class="modal-add hide">
-        <form action="#">
+        <form action="#" method="post">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
               Adicionar campus
             </legend>
 
             <div class="modal-item">
-              <!-- <label for="" id="" class="modal-label">Example</label> -->
               <input
                 type="text"
                 name="campus"
@@ -217,20 +188,11 @@
             </div>
             <div class="modal-buttons">
               <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
             </div>
           </fieldset>
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <input type="hidden" id="campus-id" />
   </body>
 </html>
