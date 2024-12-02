@@ -1,0 +1,24 @@
+<script
+  src="https://cdn.jsdelivr.net/npm/@electric-sql/pglite-repl/dist-webcomponent/Repl.js"
+  type="module"
+></script>
+
+<!-- Include the Repl web component in your page -->
+<pglite-repl id="repl"></pglite-repl>
+
+<script type="module">
+  import {
+    runMigrations,
+    executeQuery as query,
+    pg,
+  } from "/database/migrations.js";
+
+  await runMigrations();
+
+  // Create a PGlite instance
+  // Retrieve the Repl element
+  const repl = document.getElementById("repl");
+
+  // REPL to your PGlite instance
+  repl.pg = pg;
+</script>

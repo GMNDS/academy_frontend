@@ -1,10 +1,12 @@
 import { PGlite } from "https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js";
 
+let pg;
+
 export async function runMigrations() {
   const response = await fetch("http://localhost/migrations/");
   const files = (await response.json()).map((obj) => obj.name);
 
-  const pg = await PGlite.create("idb://pgdata");
+  pg = await PGlite.create("idb://pgdata");
 
   await pg.exec(`CREATE TABLE IF NOT EXISTS migrations (
 	id SERIAL PRIMARY KEY,
@@ -44,3 +46,5 @@ export async function executeQuery(query) {
   const result = await pg.query(query);
   return result.rows;
 }
+
+export { pg };
