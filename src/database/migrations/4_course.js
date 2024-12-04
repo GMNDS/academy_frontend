@@ -8,6 +8,7 @@ export async function up(pg) {
 		created_at TIMESTAMP DEFAULT NOW(),
 		status boolean DEFAULT TRUE
 	);
+  
 	INSERT INTO course (coordenador_id,name,description,category) VALUES ('1','Curso de Go','Aprenda desenvolver em GO','Programação');
 	INSERT INTO course(coordenador_id,name,description,category) VALUES ('2','Curso de Python','Aprenda desenvolver em Python','Programação');
 	INSERT INTO course(coordenador_id,name,description,category) VALUES ('3','Curso de Java','Aprenda desenvolver em Java','Programação');

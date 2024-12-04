@@ -1,7 +1,7 @@
 export async function up(pg) {
   await pg.exec(`CREATE TABLE IF NOT EXISTS goe (
 		id SERIAL PRIMARY KEY,
-		campus_id INTEGER NOT NULL REFERENCES campus(id) ON DELETE CASCADE,
+		campus_id INTEGER REFERENCES campus(id) ON DELETE SET NULL,
 		name TEXT NOT NULL,
 		last_name TEXT NOT NULL
 	
