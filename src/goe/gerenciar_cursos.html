@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <title>Academy - Gerenciar cursos</title>
-    <script src="/assets/scripts/script.js" defer></script>
+    <script type="module" src="/database/course.js" defer></script>
     <script src="/assets/scripts/user_card.js" defer></script>
   </head>
   <body>
@@ -147,8 +147,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
     <main id="main">
@@ -158,119 +156,106 @@
         <button class="button add" id="open-modal">Adicionar curso</button>
       </section>
       <section id="views-section" class="views-section">
-        <ul class="view-list">
+        <template id="course-template">
           <li class="view-item">
             <div class="view-body">
-              <h2>Segurança da Informação</h2>
-              <p>2800 horas</p>
-              <p>Começo letivo: 02/2025</p>
-              <p>Coordenação do Curso: Silva e Silva</p>
-              <p>40 Alunes</p>
+              <h2 class="course-name">nome do curso</h2>
+              <p class="course-professor">professor responsável</p>
+              <p class="course-description">descrição do curso</p>
+              <p class="course-status">status</p>
+              <p class="course-category">categoria</p>
             </div>
             <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
           </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Engenharia de Software</h2>
-              <p>3000 horas</p>
-              <p>Começo letivo: 03/2025</p>
-              <p>Coordenação do Curso: João Pereira</p>
-              <p>50 Alunes</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Ciência de Dados</h2>
-              <p>3200 horas</p>
-              <p>Começo letivo: 04/2025</p>
-              <p>Coordenação do Curso: Maria Souza</p>
-              <p>45 Alunes</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Inteligência Artificial</h2>
-              <p>3500 horas</p>
-              <p>Começo letivo: 05/2025</p>
-              <p>Coordenação do Curso: Carlos Lima</p>
-              <p>35 Alunes</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Redes de Computadores</h2>
-              <p>2800 horas</p>
-              <p>Começo letivo: 06/2025</p>
-              <p>Coordenação do Curso: Ana Clara</p>
-              <p>40 Alunes</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Desenvolvimento Web</h2>
-              <p>2900 horas</p>
-              <p>Começo letivo: 07/2025</p>
-              <p>Coordenação do Curso: Pedro Santos</p>
-              <p>50 Alunes</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
+        </template>
+        <ul class="view-list"></ul>
       </section>
 
       <section id="modal-add" class="modal-add hide">
-        <form action="#">
+        <form id="course-form" method="post">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
+              Adicionar Curso
             </legend>
 
             <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
+              <label for="modal-course-name" class="modal-label"
+                >Nome do Curso</label
+              >
+              <input
+                type="text"
+                name="modal-course-name"
+                id="modal-course-name"
+                class="modal-input"
+                required
+              />
             </div>
+            <div class="modal-item">
+              <label for="modal-course-description" class="modal-label"
+                >Descrição</label
+              >
+              <input
+                type="text"
+                name="modal-course-description"
+                id="modal-course-description"
+                class="modal-input"
+                required
+              />
+            </div>
+            <div class="modal-item">
+              <label for="modal-course-status" class="modal-label"
+                >Status</label
+              >
+              <select
+                name="modal-course-status"
+                id="modal-course-status"
+                class="modal-input"
+                required
+              >
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+              </select>
+            </div>
+            <div class="modal-item">
+              <label for="modal-course-professor" class="modal-label"
+                >Professor Responsável</label
+              >
+              <select
+                name="modal-course-professor"
+                id="modal-course-professor"
+                class="modal-input"
+                required
+              >
+                <!-- professores-->
+              </select>
+            </div>
+            <div class="modal-item">
+              <label for="modal-course-category" class="modal-label"
+                >Categoria</label
+              >
+              <select
+                name="modal-course-category"
+                id="modal-course-category"
+                class="modal-input"
+                required
+              >
+                <option value="Programação">Programação</option>
+                <option value="Matemática">Matemática</option>
+                <option value="Ciências">Ciências</option>
+                <option value="Humanas">Humanas</option>
+                <!-- Adicione mais categorias conforme necessário -->
+              </select>
+            </div>
+            <input type="hidden" id="modal-course-id" />
             <div class="modal-buttons">
               <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
             </div>
           </fieldset>
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

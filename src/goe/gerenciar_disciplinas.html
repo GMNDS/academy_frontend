@@ -13,8 +13,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <title>Academy - Gerenciar Dsiciplinas</title>
-    <script src="/assets/scripts/script.js" defer></script>
+    <title>Academy - Gerenciar Disciplinas</title>
+    <script type="module" src="/database/subject.js" defer></script>
     <script src="/assets/scripts/user_card.js" defer></script>
   </head>
   <body>
@@ -124,20 +124,8 @@
             </div>
           </div>
           <div class="profile-dropdown-body">
-            <ul class="profile-nav-list">
-              <li class="profile-nav-item">
-                <a href="gerenciar_eventos.html" class="profile-nav-link">
-                  Eventos
-                </a>
-              </li>
-              <li class="profile-nav-item">
-                <a href="gerenciar_noticias.html" class="profile-nav-link">
-                  Notícias
-                </a>
-              </li>
-            </ul>
             <div class="profile-buttons">
-              <button class="button save" id="send-view">
+              <button class="button profile" id="profile-button">
                 <a href="#">Perfil</a>
               </button>
               <button class="button cancel" id="close-profile">
@@ -147,8 +135,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
     <main id="main">
@@ -158,82 +144,50 @@
         <button class="button add" id="open-modal">Adicionar disciplina</button>
       </section>
       <section id="views-section" class="views-section">
-        <ul class="view-list">
+        <template id="subject-template">
           <li class="view-item">
             <div class="view-body">
-              <h2>Design Digital</h2>
-              <p>
-                Professor: João Carlos<br />segunda-feira 19:00-23:30 - Lab 1
-              </p>
+              <h2 class="subject-name">nome</h2>
+              <p class="subject-code">código</p>
             </div>
+
             <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
           </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Algoritmos e estruturas de dados</h2>
-              <p>Professor: Vanin<br />terça-feira 19:00-23:30 - Lab 1</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Engenharia de Software I</h2>
-              <p>Professor: Rennan<br />quarta-feira 19:00-23:30 - Lab 2</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Modelagem de Banco de dados</h2>
-              <p>Professor: Jobel<br />quinta-feira 19:00-23:30 - Lab 5</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Web Design I</h2>
-              <p>Professor: Humberto<br />sexta-feira 19:00-23:30 - Lab 5</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Redes e Sistemas Operacionais</h2>
-              <p>Professor: Vaz<br />sábado 08:00-11:30 - Lab 5</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
+        </template>
+        <ul class="view-list"></ul>
       </section>
 
       <section id="modal-add" class="modal-add hide">
-        <form action="#">
+        <form action="" method="post" id="subject-form">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar disciplina
+              Adicionar Disciplina
             </legend>
 
             <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
+              <label for="name" class="modal-label">Nome</label>
+              <input
+                type="text"
+                name="modal-name"
+                id="modal-name"
+                class="modal-input"
+                placeholder="Insira o nome da disciplina"
+                required
+              />
+            </div>
+            <div class="modal-item">
+              <label for="code" class="modal-label">Código</label>
+              <input
+                type="text"
+                name="modal-code"
+                id="modal-code"
+                class="modal-input"
+                placeholder="Insira o código da disciplina"
+                required
+              />
             </div>
             <div class="modal-buttons">
               <button class="button save" id="send-view">Salvar</button>
@@ -243,14 +197,6 @@
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <input type="hidden" id="modal-id" />
   </body>
 </html>

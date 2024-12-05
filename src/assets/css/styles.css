@@ -384,6 +384,7 @@ main {
 .modal-title {
   position: relative;
   top: 3rem;
+  left: 27.5%;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;

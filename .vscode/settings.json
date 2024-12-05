@@ -14,22 +14,10 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.enable": true,
   "prettier.singleQuote": false,
-  "prettier.semi": true,
-  //zen
-  "zenMode.fullScreen": false,
-  "zenMode.centerLayout": false,
-  "zenMode.showTabs": "single",
-  "zenMode.hideLineNumbers": false,
-  //
+  "prettier.semi": true,  
   "workbench.iconTheme": "material-icon-theme",
   "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "java": false,
-    "sql": false,
-    "javascript": false
+    "*": true
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
