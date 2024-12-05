@@ -2,8 +2,8 @@ export async function up(pg) {
   await pg.exec(`CREATE TABLE IF NOT EXISTS class_enroll (
     id SERIAL PRIMARY KEY,
     enroll_id INTEGER NOT NULL REFERENCES enroll(id),
-    class_id INTEGER NOT NULL REFERENCES class(id) ON DELETE CASCADE,
-    grade_id INTEGER NOT NULL UNIQUE REFERENCES grade(id),
+    class_id INTEGER  REFERENCES class(id) ON DELETE CASCADE,
+    grade_id INTEGER UNIQUE REFERENCES grade(id),
     status BOOLEAN NOT NULL 
   );
   INSERT INTO class_enroll (enroll_id, class_id, grade_id, status) VALUES (1, 1, 1, TRUE);

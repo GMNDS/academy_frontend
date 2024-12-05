@@ -1,28 +1,17 @@
-<!--header = cabeçalho-->
-<!--div = division (divisão)-->
-<!-- h1 = heading 1 (titulo de nível 1)-->
-<!-- nav = navigation bar (barra de navegação)-->
-<!-- ul = unordered list (lista não ordenada)-->
-<!-- li = list item-->
-<!-- a  = anchor-->
-<!-- p = paragraph (parágrafo)-->
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <title>Academy - Gerenciar matrículas</title>
-    <script src="/assets/scripts/script.js" defer></script>
-    <script src="/assets/scripts/user_card.js" defer></script>
+    <title>Academy - Gerenciar Matrículas</title>
+    <script type="module" src="/database/enroll.js" defer></script>
   </head>
   <body>
     <header id="header">
       <div class="logo">
         <svg
           id="academy-logo"
-          eu
           width="32"
           height="32"
           viewBox="0 0 60 70"
@@ -124,20 +113,8 @@
             </div>
           </div>
           <div class="profile-dropdown-body">
-            <ul class="profile-nav-list">
-              <li class="profile-nav-item">
-                <a href="gerenciar_eventos.html" class="profile-nav-link">
-                  Eventos
-                </a>
-              </li>
-              <li class="profile-nav-item">
-                <a href="gerenciar_noticias.html" class="profile-nav-link">
-                  Notícias
-                </a>
-              </li>
-            </ul>
             <div class="profile-buttons">
-              <button class="button save" id="send-view">
+              <button class="button profile" id="profile-button">
                 <a href="#">Perfil</a>
               </button>
               <button class="button cancel" id="close-profile">
@@ -147,134 +124,93 @@
           </div>
         </div>
       </div>
-
-      <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
         <h1>Matrículas</h1>
-        <button class="button add" id="open-modal">Adicionar matrículas</button>
+        <button class="button add" id="open-modal">Adicionar Matrícula</button>
       </section>
-      <select class="turma-select" name="turma-select" id="turma-select">
-        <option value="T-A1">Turma A1</option>
-        <option value="T-A2">Turma A2</option>
-        <option value="T-A3">Turma A3</option>
-      </select>
       <section id="views-section" class="views-section">
-        <ul class="view-list">
+        <template id="enroll-template">
           <li class="view-item">
             <div class="view-body">
-              <h2>João Silva Kobayashi</h2>
-              <p>RA: 0000001</p>
-              <p>Curso: Analise e Desenvolvimento de Sistemas</p>
-              <p>Período: Noturno</p>
-              <p>TURMA A1</p>
+              <h2 class="student-name">Nome do Aluno</h2>
+              <p class="student-email">Email do Aluno</p>
+              <p class="course-name">Nome do Curso</p>
+              <p class="enroll-status">Status da Matrícula</p>
+              <p class="class-name">Turma</p>
+              <p class="grades">Notas</p>
             </div>
             <div class="view-buttons">
               <button class="button edit">Editar</button>
               <button class="button delete">Excluir</button>
             </div>
           </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section">
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Larissa de Souza Santos</h2>
-              <p>RA: 0000005</p>
-              <p>Curso: Polímeros</p>
-              <p>Período: Manhã</p>
-              <p>TURMA A2</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section">
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Renato Araujo de Souza</h2>
-              <p>RA: 0000004</p>
-              <p>Curso: Logística</p>
-              <p>Período: Noturno</p>
-              <p>TURMA A1</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section">
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>Rebecca da Silva Formosa</h2>
-              <p>RA: 0000003</p>
-              <p>Curso: Analise e Desenvolvimento de Sistemas</p>
-              <p>Período: Noturno</p>
-              <p>TURMA A3</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="views-section" class="views-section">
-        <ul class="view-list">
-          <li class="view-item">
-            <div class="view-body">
-              <h2>André Nascimento Abreu</h2>
-              <p>RA: 0000002</p>
-              <p>Curso: Analise e Desenvolvimento de Sistemas</p>
-              <p>Período: Noturno</p>
-              <p>TURMA A3</p>
-            </div>
-            <div class="view-buttons">
-              <button class="button edit">Editar</button>
-              <button class="button delete">Excluir</button>
-            </div>
-          </li>
-        </ul>
+        </template>
+        <ul class="view-list"></ul>
       </section>
 
       <section id="modal-add" class="modal-add hide">
-        <form action="#">
+        <form id="enroll-form" method="post">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
+              Adicionar Matrícula
             </legend>
 
             <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
+              <label for="modal-student-name">Nome do Aluno:</label>
+              <input
+                type="text"
+                id="modal-student-name"
+                name="modal-student-name"
+                class="modal-input"
+                required
+              />
+
+              <label for="modal-student-last-name">Sobrenome do Aluno:</label>
+              <input
+                type="text"
+                id="modal-student-last-name"
+                name="modal-student-last-name"
+                class="modal-input"
+                required
+              />
+
+              <label for="modal-student-email">Email do Aluno:</label>
+              <input
+                type="email"
+                id="modal-student-email"
+                name="modal-student-email"
+                class="modal-input"
+                required
+              />
+
+              <label for="modal-course-name">Curso:</label>
+              <select name="modal-course-name" id="modal-course-name"></select>
+              <label for="modal-class-name">Turma:</label>
+              <select name="modal-class-name" id="modal-class-name"></select>
+
+              <label for="modal-enroll-status">Status da Matrícula:</label>
+              <select
+                id="modal-enroll-status"
+                name="enroll-status"
+                class="modal-input"
+                required
+              >
+                <option value="true">Ativo</option>
+                <option value="false">Inativo</option>
+              </select>
             </div>
+            <input type="hidden" id="modal-id" />
+            <input type="hidden" id="modal-student" />
             <div class="modal-buttons">
               <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
             </div>
           </fieldset>
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
