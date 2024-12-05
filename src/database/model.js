@@ -7,16 +7,20 @@ async function RenderModel() {
     const GetAllModel = await query("SELECT * FROM model");
     console.log(GetAllModel);
 
-    const template = document.querySelector("#model-template").content;
+    const template = document.querySelector("#template").content;
     const viewList = document.querySelector(".view-list");
 
-    GetAllModel.forEach((model) => {
+    while (viewList.firstChild) {
+      viewList.removeChild(viewList.firstChild);
+    }
+
+    for (let model of GetAllModel) {
       const clone = document.importNode(template, true);
       clone.querySelector("h2").textContent = model.name;
       clone.querySelector("li").dataset.id = model.id;
 
       viewList.appendChild(clone);
-    });
+    }
   } catch (error) {
     console.error(error);
   }
@@ -24,17 +28,19 @@ async function RenderModel() {
 
 async function createModel(modelName) {
   await query(`INSERT INTO model (name) VALUES ('${modelName}')`);
-  location.reload();
+  RenderModel();
+  toggleHide();
 }
 
 async function updateModel(modelName, modelId) {
   await query(`UPDATE model SET name = '${modelName}' WHERE id = ${modelId}`);
-  location.reload();
+  RenderModel();
+  toggleHide();
 }
 
 async function deleteModel(modelId) {
   await query(`DELETE FROM model WHERE id = ${modelId}`);
-  location.reload();
+  RenderModel();
 }
 
 // Renderizar model
@@ -67,8 +73,8 @@ document
   .querySelector("#send-view")
   .addEventListener("click", async (event) => {
     event.preventDefault();
-    const modelName = document.querySelector("#model").value;
-    const modelId = document.querySelector("#model-id").value;
+    const modelName = document.querySelector("#modal-name").value;
+    const modelId = document.querySelector("#modal-id").value;
     console.log(modelId);
     if (modelName && isCreate == true) {
       await createModel(modelName);
@@ -89,9 +95,9 @@ document
       console.log(isCreate);
       const modalTitle = document.querySelector("#modal-title");
       modalTitle.textContent = "Editar model";
-      const modelName = document.querySelector("#model");
+      const modelName = document.querySelector("#modal-name");
       modelName.value = modelItem.querySelector("h2").textContent;
-      document.querySelector("#model-id").value = modelId;
+      document.querySelector("#modal-id").value = modelId;
       toggleHide();
     }
 
