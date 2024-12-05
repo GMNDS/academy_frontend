@@ -13,9 +13,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/gerenciar_turmas.css" />
-    <title>Academy - Gerenciar turmas</title>
-    <script src="/assets/scripts/script.js" defer></script>
+    <title>Academy - Gerenciar Turmas</title>
+    <script type="module" src="/database/class.js" defer></script>
     <script src="/assets/scripts/user_card.js" defer></script>
   </head>
   <body>
@@ -125,7 +124,7 @@
             </div>
           </div>
           <div class="profile-dropdown-body">
-            <ul class="profile-nav-list">
+            <!-- <ul class="profile-nav-list">
               <li class="profile-nav-item">
                 <a href="gerenciar_eventos.html" class="profile-nav-link">
                   Eventos
@@ -136,9 +135,9 @@
                   Notícias
                 </a>
               </li>
-            </ul>
+            </ul> -->
             <div class="profile-buttons">
-              <button class="button save" id="send-view">
+              <button class="button profile" id="profile-button">
                 <a href="#">Perfil</a>
               </button>
               <button class="button cancel" id="close-profile">
@@ -148,107 +147,71 @@
           </div>
         </div>
       </div>
-
-      <!-- <button class="button sign-in">Sign In</button> -->
     </header>
 
     <main id="main">
       <div class="fade hide" id="fade"></div>
       <section id="generic-header" class="generic-header">
-        <h1>Gerenciador de Turmas</h1>
-        <form action="/pesquisar" method="get">
-          <input class="barra_de_pesquisa" type="search" id="pesquisa" name="q" placeholder="Digite a turma desejada">
-          <button class="button buscar" type="submit">Buscar</button>
+        <h1>Turmas</h1>
         <button class="button add" id="open-modal">Adicionar Turma</button>
       </section>
       <section id="views-section" class="views-section">
-        <ul class="view-list">
+        <template id="template">
           <li class="view-item">
             <div class="view-body">
-              <h2>1º Ano | Turma A</h2>
-              <p>Desenvolvimento de Software Multiplataforma</p>
-              <p>Campus Mauá</p>
-            </div>
-              <div class="view-buttons">
-               <button class="button button_verificar">Verificar Disciplinas</button>
-                <div class="button_group">
-                  <button class="button edit">Editar</button>
-                  <button class="button delete">Excluir</button>
-                </div>
-            </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>2º Ano | Turma A</h2>
-              <p>Desenvolvimento de Software Multiplataforma</p>
-              <p>Campus Mauá</p>
+              <h2 class="class-name">Nome da Turma</h2>
+              <p class="professor-name">Nome do Professor</p>
+              <p class="subject-name">Nome da Disciplina</p>
             </div>
             <div class="view-buttons">
-             <button class="button button_verificar">Verificar Disciplinas</button>
-              <div class="button_group">
-                <button class="button edit">Editar</button>
-                <button class="button delete">Excluir</button>
-              </div>
-          </div>
-          </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>3º Ano | Turma A</h2>
-              <p>Desenvolvimento de Software Multiplataforma</p>
-              <p>Campus Mauá</p>
+              <button class="button edit">Editar</button>
+              <button class="button delete">Excluir</button>
             </div>
-            <div class="view-buttons">
-             <button class="button button_verificar">Verificar Disciplinas</button>
-              <div class="button_group">
-                <button class="button edit">Editar</button>
-                <button class="button delete">Excluir</button>
-              </div>
-          </div>
           </li>
-          <li class="view-item">
-            <div class="view-body">
-              <h2>1º Ano | Turma A</h2>
-              <p>Informática para Negócios</p>
-              <p>Campus Mauá</p>
-            </div>
-            <div class="view-buttons">
-             <button class="button button_verificar">Verificar Disciplinas</button>
-              <div class="button_group">
-                <button class="button edit">Editar</button>
-                <button class="button delete">Excluir</button>
-              </div>
-          </div>
-          </li>
-        </ul>
+        </template>
+        <ul class="view-list"></ul>
       </section>
 
       <section id="modal-add" class="modal-add hide">
-        <form action="#">
+        <form action="#" method="post">
           <fieldset id="modal-form" class="modal-form">
             <legend id="modal-title" class="modal-title">
-              Adicionar {nome}
+              Adicionar Turma
             </legend>
 
             <div class="modal-item">
-              <label for="" id="" class="modal-label">Example</label>
-              <input type="" name="" id="" class="modal-input" />
+              <label class="modal-label" for="modal-class-name">Turma</label>
+              <input
+                type="text"
+                name="modal-class-name"
+                id="modal-class-name"
+                class="modal-input"
+                placeholder="Insira o nome da Turma"
+              />
+              <label class="modal-label" for="modal-professor-name"
+                >Professor</label
+              >
+              <select
+                name="modal-professor-name"
+                id="modal-professor-name"
+                class="modal-input"
+              ></select>
+              <label class="modal-label" for="modal-subject-name"
+                >Disciplina</label
+              >
+              <select
+                name="modal-subject-name"
+                id="modal-subject-name"
+                class="modal-input"
+              ></select>
             </div>
             <div class="modal-buttons">
               <button class="button save" id="send-view">Salvar</button>
-              <button class="button cancel" id="close-modal">Cancelar</button>
             </div>
           </fieldset>
         </form>
       </section>
     </main>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <input type="hidden" id="modal-id" />
   </body>
 </html>
