@@ -1,5 +1,16 @@
 # Academy Front-END
 
+## Site
+
+[Academy](https://academyuniverse.site/)
+[Academy aluno](https://academyuniverse.site/aluno/)
+[Academy professor](https://academyuniverse.site/professor/)
+[Academy admin](https://academyuniverse.site/goe/)
+
+## Banco de dados
+
+[Academy database](https://dbdiagram.io/d/academy-67282546b1b39dd8585752d0)
+
 ## Contribuir
 
 ### Pré-requisitos
