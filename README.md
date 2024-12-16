@@ -35,6 +35,7 @@ Nesse projeto para que ele possa subir ao ar usamos algumas tecnologias tanto pa
 
 Como se trata de uma prova de conceito o desenvolvimento foi inteiramente feito em HTML, CSS e Javascript, além do auxílio do devcontainers no codespaces do github. O projeto foi dockerizado para que pudesse ser implementado de forma reproduzível, ele utilizado Nginx como webserver dentro do container e outro container com Traefik controla o proxy reverso que aponta para o domínio que está cadastrado na cloudflare. Essa infraestrutura permite que o domínio com o projeto esteja disponível de forma confiável utilizando um certificado SSL e impeça que possíveis vunerabilidades afete todo o servidor.
 
+Para o exemplo de funcionalidades apresentadas na tela do administrador utilizamos o [PgLite](https://pglite.dev/) que é uma forma de utilizar um banco de dados postgres através de um pacote WASM de 3mb no frontend do navegador. Mesmo não servindo para o propósito em produção para uma prova de conceito é uma escolha rápida.
 
 
 
