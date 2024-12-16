@@ -1,80 +1,40 @@
 # Academy Front-END
 
-## Site
+Academy é um sistema criado para o projeto interdisciplinar do curso de Desenvolvimento de Software Multiplataforma, focado em um sistema educacional genérico que possa ser utilizado por faculdades e cursos, podendo ser personalizável para cada empresa e com uma grande gama de ferramentas para melhor experiência do aluno, professor e administração da instituição.
 
-[Academy](https://academyuniverse.site/)
-[Academy aluno](https://academyuniverse.site/aluno/)
-[Academy professor](https://academyuniverse.site/professor/)
-[Academy admin](https://academyuniverse.site/goe/)
+Ele está sendo desenvolvido primariamente no PowerApps, HTML, CSS e Javascript. Atualmente se trata de uma prova de conceito sem funcionalidades reais.
+
+## Site
+Você pode acessar as telas que simulam as funcionalidades. Atualmente você pode experimentar a experiência de CRUD com a tela do administrador
+
+[Academy tela de login](https://academyuniverse.site/)
+
+[Academy tela do aluno](https://academyuniverse.site/aluno/)
+
+[Academy tela do professor](https://academyuniverse.site/professor/)
+
+[Academy tela do administrador](https://academyuniverse.site/goe/)
 
 ## Banco de dados
+Apesar de não ter um banco de dados propriamente dito a modelagem do banco de dados já foi feita em seu estágio inicial, começando com 19 tabelas que se relacionam pra fazer as funcionalidades mínimas de um sistema de gerenciamento escolar. Pode ser visualizada no link abaixo:
 
-[Academy database](https://dbdiagram.io/d/academy-67282546b1b39dd8585752d0)
+[Banco de dados do academy](https://dbdiagram.io/d/academy-67282546b1b39dd8585752d0)
 
-## Contribuir
 
-### Pré-requisitos
+## Tecnologias utilizadas
+Nesse projeto para que ele possa subir ao ar usamos algumas tecnologias tanto para desenvolvimento quanto para produção:
 
-- Git instalado
-- Visual Studio Code
+- HTML
+- CSS
+- Javascript
+- Nginx
+- Docker
+- Devcontainer
+- Traefik
+- Cloudflare
 
-### Configuração de ambiente
+Como se trata de uma prova de conceito o desenvolvimento foi inteiramente feito em HTML, CSS e Javascript, além do auxílio do devcontainers no codespaces do github. O projeto foi dockerizado para que pudesse ser implementado de forma reproduzível, ele utilizado Nginx como webserver dentro do container e outro container com Traefik controla o proxy reverso que aponta para o domínio que está cadastrado na cloudflare. Essa infraestrutura permite que o domínio com o projeto esteja disponível de forma confiável utilizando um certificado SSL e impeça que possíveis vunerabilidades afete todo o servidor.
 
-- **Clone o projeto**
 
-Faça um clone do projeto na pasta que deseja colocar seus projetos, através do terminal ou vscode e abra ela no vscode.
 
-```bash
-git clone https://github.com/GMNDS/academy_frontend.git
-code academy_frontend
-```
-
-- **Instale as extensões**
-
-  Caso, não tenha instale as extensões recomendas, vai aparecer nas notificaçÕes na parte inferior
-
-- **Copie o modelo**
-
-  Crie uma nova página HTML copiando o [modelo.html](modelo.html) e adicione na pasta correta (professor,goe,aluno,etc...)
-
-- **Corrija as referências para os arquivos**
-
-Arrume a referência de links do `styles.css` e `script.js` para os estilos e os scripts funcionarem. Se você colocar somente em uma pasta a mais é só mudar para: `..` significa a pasa anterior
-
-```html
-<link rel="stylesheet" href="../assets/css/styles.css" />
-<script src="../assets/scripts/script.js" defer></script>
-```
-
-- **Mantenha a consisência**
-
-As classes e IDs existentes nos arquivos CSS são genericos para maior parte das situações, use-os para estilizar seus elementos. Caso precise de algo específico só para página crie um novo arquivo CSS e referencie ele. Já está tudo estruturado, então basta modificar.
-
-- **Teste se tudo está certo**
-
-Teste suas alterações com **Live preview**, verifique se tudo está funcionando corretamente. você pode testar no navegador copiando o link do live preview no seu navegador.
-
-- **Faça Commit Das Suas Alterações**
-
-  - No terminal, verifique quais arquivos foram modificados:
-    ```bash
-    git status
-    ```
-  - Adicione os arquivos ao commit (nao esqueça de adicionar a pasta):
-
-    ```bash
-    git add pasta/pagina.html
-    ```
-
-  - Faça um commit com uma mensagem descritiva:
-    ```bash
-    git commit -m "Adiciona nova página X"
-    ```
-
-- **Envie as Alterações Para o repositório**
-
-  - Faça push das suas alterações para o repositório remoto:
-    ```bash
-    git push origin main
-    ```
 
