@@ -20,7 +20,7 @@ Você pode acessar as telas que simulam as funcionalidades. Atualmente você pod
 
 ![image](https://github.com/user-attachments/assets/5e2a493a-f294-4179-8753-915cdb2cf9a9)
 
-[Academy tela do administrador](https://academyuniverse.site/goe/)
+[Tela do administrador](https://academyuniverse.site/goe/)
 
 ![image](https://github.com/user-attachments/assets/fca0e6cb-b427-4312-b73e-00cde38a22b3)
 
