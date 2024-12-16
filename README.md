@@ -5,15 +5,28 @@ Academy é um sistema criado para o projeto interdisciplinar do curso de Desenvo
 Ele está sendo desenvolvido primariamente no PowerApps, HTML, CSS e Javascript. Atualmente se trata de uma prova de conceito sem funcionalidades reais.
 
 ## Site
-Você pode acessar as telas que simulam as funcionalidades. Atualmente você pode experimentar a experiência de CRUD com a tela do administrador
 
-[Academy tela de login](https://academyuniverse.site/)
+Você pode acessar as telas que simulam as funcionalidades. Atualmente você pode experimentar uma interaçao simples com o banco de dados a partir da tela do administrador, as demais são apenas visuais.
 
-[Academy tela do aluno](https://academyuniverse.site/aluno/)
+[Tela de login](https://academyuniverse.site/)
 
-[Academy tela do professor](https://academyuniverse.site/professor/)
+![image](https://github.com/user-attachments/assets/a4ba8402-ee56-41fc-903d-680795222e6b)
+
+[Tela do aluno](https://academyuniverse.site/aluno/)
+
+![image](https://github.com/user-attachments/assets/d964feca-badb-4a59-af9f-e91d6813b946)
+
+[Tela do professor](https://academyuniverse.site/professor/)
+
+![image](https://github.com/user-attachments/assets/5e2a493a-f294-4179-8753-915cdb2cf9a9)
 
 [Academy tela do administrador](https://academyuniverse.site/goe/)
+
+![image](https://github.com/user-attachments/assets/fca0e6cb-b427-4312-b73e-00cde38a22b3)
+
+
+> [!TIP]
+> O site também é responsivo, caso deseje, também poderá acessar pelo navegador no celular
 
 ## Banco de dados
 Apesar de não ter um banco de dados propriamente dito a modelagem do banco de dados já foi feita em seu estágio inicial, começando com 19 tabelas que se relacionam pra fazer as funcionalidades mínimas de um sistema de gerenciamento escolar. Pode ser visualizada no link abaixo:
